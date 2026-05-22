@@ -239,20 +239,20 @@ strong.hl-orange { color: var(--orange); font-weight: 700; }
 
 
 /* ============================================================
-   BRAND LOGO (replaces brand mark + wordmark)
+   BRAND LOGO (compact image, matches prior brand-mark+text size)
    ============================================================ */
 .brand {
   display: inline-flex;
   align-items: center;
-  height: 36px;
+  height: 30px;
 }
 .brand-logo {
-  height: 36px;
+  height: 30px;
   width: auto;
   display: block;
 }
 .brand-logo-footer {
-  height: 42px;
+  height: 34px;
 }
 
 
@@ -277,7 +277,7 @@ strong.hl-orange { color: var(--orange); font-weight: 700; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 72px;
 }
 
 .site-nav { display: flex; align-items: center; gap: 2.25rem; }
@@ -658,9 +658,10 @@ strong.hl-orange { color: var(--orange); font-weight: 700; }
   display: flex;
   gap: 3px;
   align-items: center;
-  height: 110px;
+  height: 180px;
   width: 100%;
   max-width: 320px;
+  filter: drop-shadow(0 0 24px rgba(234, 64, 35, 0.25));
 }
 .mm-wave span {
   display: inline-block;
@@ -704,72 +705,39 @@ strong.hl-orange { color: var(--orange); font-weight: 700; }
 .mm-wave span:nth-child(3n)  { animation-delay: 0.4s; }
 .mm-wave span:nth-child(5n)  { animation-delay: 0.6s; }
 
-/* NEW: Visual depiction (right side, replaces blue waveform) */
+/* Live Visual: blue waveform + video camera badge — mirrors voice side */
 .mm-visual {
   position: relative;
   width: 100%;
-  max-width: 280px;
-  height: 220px;
+  max-width: 320px;
+  height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
+  filter: drop-shadow(0 0 24px rgba(91, 155, 213, 0.28));
 }
-.mm-vis-screen {
-  position: relative;
-  width: 100%;
-  max-width: 220px;
-  background: rgba(91, 155, 213, 0.06);
-  border: 1px solid rgba(91, 155, 213, 0.25);
-  border-radius: var(--r-md);
-  padding: 14px;
+.mm-wave-blue span  { background: linear-gradient(180deg, var(--blue), var(--blue-deep)); }
+.mm-cam-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 78px;
+  height: 78px;
+  background: linear-gradient(135deg, var(--blue), var(--blue-deep));
+  border-radius: 50%;
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-  box-shadow: 0 0 40px rgba(91, 155, 213, 0.18);
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 0 0 6px rgba(91, 155, 213, 0.18),
+    0 0 30px rgba(91, 155, 213, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
   z-index: 2;
 }
-.mm-vis-row {
-  height: 6px;
-  background: linear-gradient(90deg, var(--blue), var(--blue-deep));
-  border-radius: 3px;
-  opacity: 0.9;
-  animation: visPulse 2s ease-in-out infinite;
-}
-.mm-vis-row-1 { width: 70%; animation-delay: 0.0s; }
-.mm-vis-row-2 { width: 50%; animation-delay: 0.15s; }
-.mm-vis-row-3 { width: 65%; animation-delay: 0.55s; }
-.mm-vis-row-4 { width: 40%; animation-delay: 0.70s; }
-.mm-vis-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 4px;
-  margin: 4px 0;
-}
-.mm-vis-grid span {
-  height: 22px;
-  background: linear-gradient(180deg, var(--blue), var(--blue-deep));
-  border-radius: 3px;
-  opacity: 0.7;
-  animation: visPulse 2s ease-in-out infinite;
-}
-.mm-vis-grid span:nth-child(1) { animation-delay: 0.1s; }
-.mm-vis-grid span:nth-child(2) { animation-delay: 0.2s; }
-.mm-vis-grid span:nth-child(3) { animation-delay: 0.3s; }
-.mm-vis-grid span:nth-child(4) { animation-delay: 0.4s; }
-.mm-vis-grid span:nth-child(5) { animation-delay: 0.5s; }
-.mm-vis-grid span:nth-child(6) { animation-delay: 0.6s; }
-.mm-vis-grid span:nth-child(7) { animation-delay: 0.7s; }
-.mm-vis-grid span:nth-child(8) { animation-delay: 0.8s; }
-@keyframes visPulse {
-  0%, 100% { opacity: 0.35; }
-  50%      { opacity: 1; }
-}
-.mm-vis-pulse {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(91, 155, 213, 0.18), transparent 70%);
-  pointer-events: none;
-  z-index: 1;
+.mm-cam-badge svg {
+  width: 48px;
+  height: 48px;
 }
 
 /* Phone image wrap (replaces CSS phone mockup) */
@@ -876,9 +844,11 @@ strong.hl-orange { color: var(--orange); font-weight: 700; }
 }
 .product-visual {
   position: relative;
-  padding: 1.75rem;
-  min-height: 220px;
+  padding: 1.5rem 1.5rem 1.25rem;
+  height: 290px;        /* fixed height -> bodies align */
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .product-visual-dark {
   background: linear-gradient(135deg, var(--bg-deep) 0%, var(--bg-navy) 100%);
@@ -913,7 +883,7 @@ strong.hl-orange { color: var(--orange); font-weight: 700; }
 }
 
 /* Sequence (product 1) */
-.sequence { display: flex; flex-direction: column; gap: 0.55rem; }
+.sequence { display: flex; flex-direction: column; gap: 0.55rem; margin-top: auto; }
 .seq-row { display: flex; align-items: center; gap: 0.45rem; }
 .seq-day {
   font-family: var(--font-mono);
@@ -944,304 +914,33 @@ strong.hl-orange { color: var(--orange); font-weight: 700; }
 .seq-row-highlight .seq-day { color: var(--tx-light); }
 
 
-/* NEW: AI Self-Service — voice waveform + AI interface + visual */
-.ss-stage-tri {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  gap: 0.6rem;
-  height: 130px;
-}
-
-/* Left: orange voice waveform (compact) */
-.ss-wave { display: flex; gap: 2px; align-items: center; height: 100%; }
-.ss-wave span {
-  display: inline-block;
-  flex: 1;
-  border-radius: 1.5px;
-  animation: wave 1.5s ease-in-out infinite;
-}
-.ss-wave-red span  { background: linear-gradient(180deg, var(--brand-light), var(--brand-deep)); }
-.ss-wave span:nth-child(1) { height: 15%; }
-.ss-wave span:nth-child(2) { height: 32%; }
-.ss-wave span:nth-child(3) { height: 55%; }
-.ss-wave span:nth-child(4) { height: 78%; }
-.ss-wave span:nth-child(5) { height: 92%; }
-.ss-wave span:nth-child(6) { height: 80%; }
-.ss-wave span:nth-child(7) { height: 60%; }
-.ss-wave span:nth-child(8) { height: 38%; }
-.ss-wave span:nth-child(9) { height: 22%; }
-.ss-wave span:nth-child(10){ height: 12%; }
-.ss-wave-red span:nth-child(odd)  { animation-delay: 0.1s; }
-.ss-wave-red span:nth-child(even) { animation-delay: 0.3s; }
-
-/* Middle: AI interface mini-mockup */
-.ss-ai {
-  display: grid;
-  place-items: center;
-  position: relative;
-}
-.ss-ai-screen {
-  width: 70px;
-  height: 95px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
-  border: 1px solid rgba(242, 142, 30, 0.45);
-  border-radius: 10px;
-  padding: 6px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  box-shadow: 0 0 24px rgba(242, 142, 30, 0.3);
-}
-.ss-ai-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 4px;
-}
-.ss-ai-badge {
-  background: linear-gradient(135deg, var(--orange), var(--brand));
-  color: #fff;
-  font-family: var(--font-mono);
-  font-size: 7px;
-  font-weight: 700;
-  padding: 1px 4px;
-  border-radius: 3px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-.ss-ai-bars { display: inline-flex; gap: 1.5px; align-items: end; height: 8px; }
-.ss-ai-bars i {
-  width: 1.5px;
-  background: var(--orange);
-  border-radius: 0.5px;
-  animation: wave 1.4s ease-in-out infinite;
-}
-.ss-ai-bars i:nth-child(1) { height: 50%; animation-delay: 0.0s; }
-.ss-ai-bars i:nth-child(2) { height: 100%; animation-delay: 0.2s; }
-.ss-ai-bars i:nth-child(3) { height: 75%; animation-delay: 0.4s; }
-.ss-ai-bubble {
-  background: rgba(242, 142, 30, 0.18);
-  border-radius: 6px;
-  height: 7px;
-  animation: visPulse 2s ease-in-out infinite;
-}
-.ss-ai-bubble-1 { width: 80%; }
-.ss-ai-bubble-2 { width: 55%; animation-delay: 0.4s; }
-
-/* Right: visual depiction (matches mm-visual style, compact) */
-.ss-visual {
-  display: grid;
-  place-items: center;
-}
-.ss-visual-screen {
+/* AI Self-Service tri-panel (SVG: Voice + AI core + Visual) */
+.ss-tri {
   width: 100%;
-  max-width: 110px;
-  height: 95px;
-  background: linear-gradient(180deg, rgba(91, 155, 213, 0.08), rgba(91, 155, 213, 0.03));
-  border: 1px solid rgba(91, 155, 213, 0.35);
-  border-radius: 10px;
-  padding: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  box-shadow: 0 0 24px rgba(91, 155, 213, 0.25);
-}
-.ss-vis-r {
-  height: 5px;
-  background: linear-gradient(90deg, var(--blue), var(--blue-deep));
-  border-radius: 2.5px;
-  animation: visPulse 2s ease-in-out infinite;
-}
-.ss-vis-r-1 { width: 80%; }
-.ss-vis-r-2 { width: 55%; animation-delay: 0.2s; }
-.ss-vis-r-3 { width: 70%; animation-delay: 0.4s; }
-.ss-vis-r-4 { width: 45%; animation-delay: 0.6s; }
-
-
-/* NEW: Agent Portal (product 3) — agent view + customer phone */
-.portal {
-  display: grid;
-  grid-template-columns: 1.4fr 0.9fr;
-  gap: 0.6rem;
-  height: 165px;
-}
-.portal-agent {
-  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-  border: 1px solid var(--rule-d-2);
-  border-radius: 8px;
-  padding: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  overflow: hidden;
-}
-.portal-agent-head {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding-bottom: 6px;
-  border-bottom: 1px solid var(--rule-d);
-}
-.portal-agent-avatar {
-  display: inline-grid;
-  place-items: center;
-  width: 22px;
-  height: 22px;
-  background: linear-gradient(135deg, var(--blue), var(--blue-deep));
-  color: #fff;
-  border-radius: 50%;
-  font-size: 10px;
-  font-weight: 700;
-  flex-shrink: 0;
-}
-.portal-agent-meta { line-height: 1.15; }
-.portal-agent-name {
-  font-size: 10px;
-  font-weight: 600;
-  color: var(--tx-light);
-}
-.portal-agent-sub {
-  font-family: var(--font-mono);
-  font-size: 8.5px;
-  color: var(--tx-light-2);
-}
-.portal-agent-chat {
   flex: 1;
   display: flex;
-  flex-direction: column;
-  gap: 4px;
-  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 0 24px rgba(242, 142, 30, 0.18));
 }
-.portal-msg {
-  font-size: 9px;
-  line-height: 1.3;
-  padding: 4px 6px;
-  border-radius: 5px;
-  max-width: 85%;
-}
-.portal-msg-them {
-  background: rgba(255,255,255,0.08);
-  color: var(--tx-light);
-  align-self: flex-start;
-  border-bottom-left-radius: 1px;
-}
-.portal-msg-me {
-  background: linear-gradient(135deg, var(--blue), var(--blue-deep));
-  color: #fff;
-  align-self: flex-end;
-  border-bottom-right-radius: 1px;
-}
-.portal-agent-tools {
-  display: flex;
-  gap: 3px;
-  padding-top: 5px;
-  border-top: 1px solid var(--rule-d);
-  flex-wrap: wrap;
-}
-.portal-tool {
-  font-size: 7.5px;
-  padding: 3px 5px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid var(--rule-d);
-  border-radius: 4px;
-  color: var(--tx-light-2);
-  white-space: nowrap;
-}
-.portal-tool-active {
-  background: linear-gradient(135deg, var(--blue), var(--blue-deep));
-  color: #fff;
-  border-color: var(--blue-deep);
-  box-shadow: 0 2px 8px rgba(91, 155, 213, 0.4);
-}
-
-/* Customer phone */
-.portal-phone {
-  position: relative;
-  background: #1a1a1a;
-  border-radius: 14px;
-  padding: 4px;
-  border: 1.5px solid #2a2a2a;
-}
-.portal-phone-notch {
-  position: absolute;
-  top: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 28px;
-  height: 7px;
-  background: #0a0a0a;
-  border-radius: 999px;
-  z-index: 2;
-}
-.portal-phone-screen {
-  background: #fff;
-  border-radius: 10px;
+.ss-tri-svg {
+  width: 100%;
   height: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
 }
-.portal-phone-banner {
-  background: #0a0a0a;
-  height: 16px;
-  display: flex;
-  align-items: center;
-  padding: 0 5px;
-  margin: 15px 4px 0;
-  border-radius: 3px;
-}
-.portal-phone-banner-mark {
-  background: var(--brand);
-  color: #fff;
-  font-family: var(--font-mono);
-  font-size: 6.5px;
-  font-weight: 700;
-  padding: 1px 3px;
-  border-radius: 2px;
-  text-transform: uppercase;
-}
-.portal-phone-prompt {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 6px 4px 4px;
-  gap: 4px;
-}
-.portal-phone-prompt-title {
-  font-size: 7.5px;
-  font-weight: 700;
-  color: #0a0a0a;
-  text-align: center;
-}
-.portal-phone-camera {
-  position: relative;
-  flex: 1;
+
+
+/* Agent Assistant — SVG illustration of desktop + customer phone */
+.portal {
   width: 100%;
-  background: #f0f0f0;
-  border-radius: 5px;
-  min-height: 30px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 0 24px rgba(91, 155, 213, 0.22));
 }
-.portal-phone-camera-corner {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border-color: var(--blue);
-  border-style: solid;
-  border-width: 0;
-}
-.portal-phone-camera-corner.tl { top: 3px; left: 3px; border-top-width: 2px; border-left-width: 2px; }
-.portal-phone-camera-corner.tr { top: 3px; right: 3px; border-top-width: 2px; border-right-width: 2px; }
-.portal-phone-camera-corner.bl { bottom: 3px; left: 3px; border-bottom-width: 2px; border-left-width: 2px; }
-.portal-phone-camera-corner.br { bottom: 3px; right: 3px; border-bottom-width: 2px; border-right-width: 2px; }
-.portal-phone-cta {
-  width: 16px;
-  height: 16px;
-  background: var(--blue);
-  border-radius: 50%;
-  border: 2px solid #fff;
-  box-shadow: 0 0 0 1.5px var(--blue);
+.portal-svg {
+  width: 100%;
+  height: 100%;
 }
 
 

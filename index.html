@@ -187,67 +187,35 @@
           <img src="images/zappix-phone-financial.png" alt="" class="phone-image">
         </div>
 
-        <!-- Right: visual (clearer mobile UI mockup) -->
+        <!-- Right: blue waveform + video camera badge (mirrors voice side) -->
         <div class="mm-side mm-side-right">
           <div class="mm-side-tag mm-side-tag-blue">Live visual <span class="dot dot-blue"></span></div>
-          <div class="mm-visual mm-visual-blue" aria-hidden="true">
-            <svg viewBox="0 0 220 320" class="mm-vis-svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-              <defs>
-                <linearGradient id="visGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#5b9bd5"/>
-                  <stop offset="100%" stop-color="#2a6fb8"/>
-                </linearGradient>
-                <linearGradient id="visScreen" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="rgba(91,155,213,0.18)"/>
-                  <stop offset="100%" stop-color="rgba(91,155,213,0.05)"/>
-                </linearGradient>
-              </defs>
-
-              <!-- Phone outline -->
-              <rect x="20" y="14" width="180" height="292" rx="22" fill="url(#visScreen)" stroke="#5b9bd5" stroke-width="1.5" opacity="0.85"/>
-              <!-- Notch -->
-              <rect x="92" y="22" width="36" height="6" rx="3" fill="#5b9bd5" opacity="0.5"/>
-
-              <!-- App header band -->
-              <rect x="32" y="42" width="156" height="28" rx="6" fill="#5b9bd5" opacity="0.85"/>
-              <circle cx="44" cy="56" r="6" fill="#fff" opacity="0.95"/>
-              <rect x="56" y="51" width="60" height="4" rx="2" fill="#fff" opacity="0.95"/>
-              <rect x="56" y="59" width="40" height="3" rx="1.5" fill="#fff" opacity="0.65"/>
-
-              <!-- Image placeholder (animated pulse) -->
-              <rect x="32" y="82" width="156" height="76" rx="8" fill="#5b9bd5" opacity="0.35">
-                <animate attributeName="opacity" values="0.25;0.6;0.25" dur="2.2s" repeatCount="indefinite"/>
-              </rect>
-              <!-- Camera/image icon inside -->
-              <circle cx="110" cy="120" r="14" fill="none" stroke="#5b9bd5" stroke-width="1.5" opacity="0.8"/>
-              <circle cx="110" cy="120" r="6" fill="#5b9bd5" opacity="0.6"/>
-
-              <!-- Text content lines -->
-              <rect x="32" y="170" width="120" height="6" rx="3" fill="#5b9bd5" opacity="0.75"/>
-              <rect x="32" y="182" width="100" height="5" rx="2.5" fill="#5b9bd5" opacity="0.55"/>
-              <rect x="32" y="192" width="140" height="5" rx="2.5" fill="#5b9bd5" opacity="0.55"/>
-
-              <!-- Action tiles -->
-              <rect x="32" y="212" width="46" height="36" rx="6" fill="#5b9bd5" opacity="0.45">
-                <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite" begin="0s"/>
-              </rect>
-              <rect x="87" y="212" width="46" height="36" rx="6" fill="#5b9bd5" opacity="0.45">
-                <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite" begin="0.4s"/>
-              </rect>
-              <rect x="142" y="212" width="46" height="36" rx="6" fill="#5b9bd5" opacity="0.45">
-                <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite" begin="0.8s"/>
-              </rect>
-
-              <!-- CTA button -->
-              <rect x="32" y="262" width="156" height="30" rx="15" fill="url(#visGrad)"/>
-              <rect x="76" y="273" width="68" height="6" rx="3" fill="#fff" opacity="0.95"/>
-
-              <!-- Live indicator dot -->
-              <circle cx="190" cy="50" r="3.5" fill="#ea4023">
-                <animate attributeName="opacity" values="1;0.3;1" dur="1.4s" repeatCount="indefinite"/>
-              </circle>
-            </svg>
-            <div class="mm-vis-glow"></div>
+          <div class="mm-visual" aria-hidden="true">
+            <!-- Blue waveform (matches orange voice wave structure) -->
+            <div class="mm-wave mm-wave-blue" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <!-- Video camera badge in center -->
+            <div class="mm-cam-badge" aria-hidden="true">
+              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <!-- Outer ring pulse -->
+                <circle cx="32" cy="32" r="30" fill="none" stroke="#fff" stroke-width="1" opacity="0.3"/>
+                <!-- Video camera body -->
+                <rect x="14" y="22" width="24" height="20" rx="3" fill="#fff"/>
+                <!-- Lens cone -->
+                <polygon points="38,26 50,18 50,46 38,38" fill="#fff"/>
+                <!-- Lens dark center -->
+                <circle cx="44" cy="32" r="3" fill="#2a6fb8"/>
+                <!-- REC dot (pulsing) -->
+                <circle cx="20" cy="28" r="2.5" fill="#ea4023">
+                  <animate attributeName="opacity" values="1;0.25;1" dur="1.4s" repeatCount="indefinite"/>
+                </circle>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
@@ -343,7 +311,7 @@
             <div class="product-glow product-glow-mixed" aria-hidden="true"></div>
             <div class="product-visual-label">Voice + AI + Visual · Synchronized</div>
             <div class="ss-tri" aria-hidden="true">
-              <svg viewBox="0 0 360 160" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" class="ss-tri-svg">
+              <svg viewBox="0 0 360 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" class="ss-tri-svg">
                 <defs>
                   <linearGradient id="ssOrange" x1="0" y1="0" x2="1" y2="1">
                     <stop offset="0%" stop-color="#f28e1e"/>
@@ -356,84 +324,95 @@
                 </defs>
 
                 <!-- Flow lines -->
-                <line x1="78" y1="80" x2="138" y2="80" stroke="#f28e1e" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.5">
+                <line x1="90" y1="80" x2="130" y2="80" stroke="#f28e1e" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.55">
                   <animate attributeName="stroke-dashoffset" values="0;-12" dur="1.2s" repeatCount="indefinite"/>
                 </line>
-                <line x1="222" y1="80" x2="282" y2="80" stroke="#5b9bd5" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.5">
+                <line x1="230" y1="80" x2="270" y2="80" stroke="#5b9bd5" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.55">
                   <animate attributeName="stroke-dashoffset" values="0;-12" dur="1.2s" repeatCount="indefinite"/>
                 </line>
 
                 <!-- LEFT: Voice / mic icon -->
-                <g transform="translate(20,30)">
+                <g transform="translate(25,28)">
                   <!-- Mic body -->
-                  <rect x="20" y="8" width="20" height="38" rx="10" fill="url(#ssOrange)"/>
+                  <rect x="22" y="8" width="22" height="42" rx="11" fill="url(#ssOrange)"/>
                   <!-- Mic stand arc -->
-                  <path d="M8 42 Q8 62, 30 62 Q52 62, 52 42" stroke="#f28e1e" stroke-width="2.5" fill="none"/>
+                  <path d="M8 46 Q8 68, 33 68 Q58 68, 58 46" stroke="#f28e1e" stroke-width="2.8" fill="none"/>
                   <!-- Stem -->
-                  <line x1="30" y1="62" x2="30" y2="78" stroke="#f28e1e" stroke-width="2.5"/>
-                  <line x1="18" y1="78" x2="42" y2="78" stroke="#f28e1e" stroke-width="2.5"/>
+                  <line x1="33" y1="68" x2="33" y2="86" stroke="#f28e1e" stroke-width="2.8"/>
+                  <line x1="20" y1="86" x2="46" y2="86" stroke="#f28e1e" stroke-width="2.8"/>
                   <!-- Sound waves -->
-                  <path d="M58 30 Q66 42, 58 54" stroke="#ea4023" stroke-width="2" fill="none" opacity="0.7">
+                  <path d="M62 32 Q72 46, 62 60" stroke="#ea4023" stroke-width="2.2" fill="none" opacity="0.7">
                     <animate attributeName="opacity" values="0.3;0.9;0.3" dur="1.5s" repeatCount="indefinite"/>
                   </path>
-                  <path d="M64 24 Q76 42, 64 60" stroke="#ea4023" stroke-width="2" fill="none" opacity="0.5">
+                  <path d="M68 24 Q82 46, 68 68" stroke="#ea4023" stroke-width="2.2" fill="none" opacity="0.5">
                     <animate attributeName="opacity" values="0.2;0.7;0.2" dur="1.5s" repeatCount="indefinite" begin="0.3s"/>
                   </path>
                   <!-- Label -->
-                  <text x="30" y="100" font-family="Geist Mono, monospace" font-size="9" font-weight="700" fill="#f28e1e" text-anchor="middle" letter-spacing="0.8">VOICE</text>
+                  <text x="33" y="124" font-family="Geist Mono, monospace" font-size="10" font-weight="700" fill="#f28e1e" text-anchor="middle" letter-spacing="0.8">VOICE</text>
                 </g>
 
                 <!-- MIDDLE: AI hexagonal core -->
-                <g transform="translate(140,30)">
+                <g transform="translate(140,18)">
                   <!-- Glow -->
-                  <circle cx="40" cy="50" r="38" fill="#ea4023" opacity="0.18">
-                    <animate attributeName="r" values="34;42;34" dur="2s" repeatCount="indefinite"/>
+                  <circle cx="40" cy="55" r="42" fill="#ea4023" opacity="0.2">
+                    <animate attributeName="r" values="38;46;38" dur="2s" repeatCount="indefinite"/>
                   </circle>
                   <!-- Hexagon -->
-                  <polygon points="40,12 70,30 70,70 40,88 10,70 10,30" fill="url(#ssOrange)" stroke="#ea4023" stroke-width="1"/>
+                  <polygon points="40,13 73,32 73,78 40,97 7,78 7,32" fill="url(#ssOrange)" stroke="#ea4023" stroke-width="1"/>
                   <!-- AI text -->
-                  <text x="40" y="56" font-family="Geist, sans-serif" font-size="22" font-weight="700" fill="#fff" text-anchor="middle">AI</text>
-                  <!-- Activity bars under AI -->
-                  <rect x="28" y="64" width="2" height="6" rx="1" fill="#fff" opacity="0.8">
+                  <text x="40" y="62" font-family="Geist, sans-serif" font-size="25" font-weight="700" fill="#fff" text-anchor="middle">AI</text>
+                  <!-- Activity bars -->
+                  <rect x="27" y="72" width="2.2" height="6" rx="1" fill="#fff" opacity="0.85">
                     <animate attributeName="height" values="3;10;3" dur="1s" repeatCount="indefinite"/>
                   </rect>
-                  <rect x="33" y="62" width="2" height="10" rx="1" fill="#fff" opacity="0.8">
+                  <rect x="32" y="70" width="2.2" height="10" rx="1" fill="#fff" opacity="0.85">
                     <animate attributeName="height" values="6;12;6" dur="1s" repeatCount="indefinite" begin="0.2s"/>
                   </rect>
-                  <rect x="38" y="60" width="2" height="12" rx="1" fill="#fff" opacity="0.9">
+                  <rect x="37" y="68" width="2.2" height="12" rx="1" fill="#fff" opacity="0.95">
                     <animate attributeName="height" values="10;14;10" dur="1s" repeatCount="indefinite" begin="0.1s"/>
                   </rect>
-                  <rect x="43" y="62" width="2" height="10" rx="1" fill="#fff" opacity="0.8">
+                  <rect x="42" y="70" width="2.2" height="10" rx="1" fill="#fff" opacity="0.85">
                     <animate attributeName="height" values="6;12;6" dur="1s" repeatCount="indefinite" begin="0.3s"/>
                   </rect>
-                  <rect x="48" y="64" width="2" height="6" rx="1" fill="#fff" opacity="0.8">
+                  <rect x="47" y="72" width="2.2" height="6" rx="1" fill="#fff" opacity="0.85">
                     <animate attributeName="height" values="3;10;3" dur="1s" repeatCount="indefinite" begin="0.4s"/>
                   </rect>
                   <!-- Label -->
-                  <text x="40" y="108" font-family="Geist Mono, monospace" font-size="9" font-weight="700" fill="#f28e1e" text-anchor="middle" letter-spacing="0.8">AI CORE</text>
+                  <text x="40" y="134" font-family="Geist Mono, monospace" font-size="10" font-weight="700" fill="#f28e1e" text-anchor="middle" letter-spacing="0.8">AI CORE</text>
                 </g>
 
-                <!-- RIGHT: Visual / screen icon -->
-                <g transform="translate(280,30)">
-                  <!-- Screen frame -->
-                  <rect x="10" y="6" width="40" height="60" rx="6" fill="none" stroke="#5b9bd5" stroke-width="2"/>
-                  <rect x="13" y="9" width="34" height="54" rx="3" fill="url(#ssBlue)" opacity="0.2"/>
-                  <!-- Screen header -->
-                  <rect x="16" y="13" width="20" height="3" rx="1.5" fill="#5b9bd5"/>
-                  <!-- Image placeholder -->
-                  <rect x="16" y="20" width="28" height="18" rx="2" fill="#5b9bd5" opacity="0.55">
-                    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite"/>
+                <!-- RIGHT: Realistic mini phone (VISUAL) -->
+                <g transform="translate(272, 16)">
+                  <!-- Phone body -->
+                  <rect x="0" y="0" width="56" height="118" rx="10" fill="#1a1a1a" stroke="#5b9bd5" stroke-width="1.3"/>
+                  <!-- Screen -->
+                  <rect x="3" y="3" width="50" height="112" rx="7" fill="#fff"/>
+                  <!-- Notch -->
+                  <rect x="20" y="6" width="16" height="3" rx="1.5" fill="#0a0a0a"/>
+                  <!-- AI status banner -->
+                  <rect x="6" y="14" width="44" height="13" rx="2.5" fill="#0a0a0a"/>
+                  <rect x="8" y="16" width="9" height="9" rx="1.5" fill="#ea4023"/>
+                  <text x="12.5" y="23" font-family="Geist Mono, monospace" font-size="6.5" font-weight="700" fill="#fff" text-anchor="middle">ai</text>
+                  <text x="35" y="23" font-family="Geist Mono, monospace" font-size="5.5" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.4">FINANCIAL</text>
+                  <!-- Image content area -->
+                  <rect x="6" y="31" width="44" height="30" rx="3" fill="#5b9bd5" opacity="0.55">
+                    <animate attributeName="opacity" values="0.3;0.75;0.3" dur="2.2s" repeatCount="indefinite"/>
                   </rect>
-                  <!-- Content lines -->
-                  <rect x="16" y="42" width="20" height="2" rx="1" fill="#5b9bd5" opacity="0.7"/>
-                  <rect x="16" y="46" width="24" height="2" rx="1" fill="#5b9bd5" opacity="0.5"/>
-                  <rect x="16" y="50" width="16" height="2" rx="1" fill="#5b9bd5" opacity="0.7"/>
-                  <!-- Button -->
-                  <rect x="18" y="56" width="24" height="5" rx="2.5" fill="#5b9bd5"/>
-                  <!-- Phone notch/home line -->
-                  <line x1="22" y1="71" x2="38" y2="71" stroke="#5b9bd5" stroke-width="2" stroke-linecap="round"/>
+                  <!-- Camera/lens icon in image area -->
+                  <circle cx="28" cy="46" r="6" fill="none" stroke="#fff" stroke-width="1.4" opacity="0.95"/>
+                  <circle cx="28" cy="46" r="2.5" fill="#fff" opacity="0.9"/>
+                  <!-- Text lines -->
+                  <rect x="6" y="66" width="32" height="3" rx="1.5" fill="#0a0a0a" opacity="0.8"/>
+                  <rect x="6" y="71.5" width="38" height="2.5" rx="1.25" fill="#0a0a0a" opacity="0.45"/>
+                  <rect x="6" y="76" width="26" height="2.5" rx="1.25" fill="#0a0a0a" opacity="0.45"/>
+                  <!-- CTA button -->
+                  <rect x="6" y="84" width="44" height="9" rx="4.5" fill="url(#ssBlue)"/>
+                  <rect x="20" y="87.5" width="16" height="2" rx="1" fill="#fff"/>
+                  <!-- Home indicator -->
+                  <line x1="20" y1="107" x2="36" y2="107" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round"/>
+
                   <!-- Label -->
-                  <text x="30" y="100" font-family="Geist Mono, monospace" font-size="9" font-weight="700" fill="#5b9bd5" text-anchor="middle" letter-spacing="0.8">VISUAL</text>
+                  <text x="28" y="140" font-family="Geist Mono, monospace" font-size="10" font-weight="700" fill="#5b9bd5" text-anchor="middle" letter-spacing="0.8">VISUAL</text>
                 </g>
               </svg>
             </div>
@@ -470,100 +449,100 @@
                 </defs>
 
                 <!-- ==== LEFT: AGENT DESKTOP / LAPTOP ==== -->
-                <g transform="translate(8,16)">
+                <g transform="translate(6,14)">
                   <!-- Laptop screen frame -->
-                  <rect x="0" y="0" width="208" height="146" rx="8" fill="#1a1d28" stroke="#5b9bd5" stroke-width="1" opacity="0.95"/>
-                  <rect x="6" y="6" width="196" height="134" rx="4" fill="url(#portalScreen)"/>
-                  <!-- Browser-style chrome -->
-                  <rect x="6" y="6" width="196" height="14" rx="4" fill="#0d1019"/>
-                  <circle cx="13" cy="13" r="2.2" fill="#ea4023"/>
-                  <circle cx="20" cy="13" r="2.2" fill="#f28e1e"/>
-                  <circle cx="27" cy="13" r="2.2" fill="#2ebb7b"/>
-                  <rect x="80" y="9" width="60" height="8" rx="2" fill="#fff" opacity="0.08"/>
+                  <rect x="0" y="0" width="212" height="142" rx="9" fill="#1a1d28" stroke="#5b9bd5" stroke-width="1.2" opacity="0.95"/>
+                  <rect x="5" y="5" width="202" height="132" rx="5" fill="url(#portalScreen)"/>
+                  <!-- Browser chrome -->
+                  <rect x="5" y="5" width="202" height="16" rx="5" fill="#0d1019"/>
+                  <circle cx="14" cy="13" r="2.8" fill="#ea4023"/>
+                  <circle cx="23" cy="13" r="2.8" fill="#f28e1e"/>
+                  <circle cx="32" cy="13" r="2.8" fill="#2ebb7b"/>
 
                   <!-- Customer info bar -->
-                  <rect x="10" y="24" width="188" height="20" rx="3" fill="#fff" opacity="0.05"/>
-                  <circle cx="22" cy="34" r="6" fill="url(#portalBlue)"/>
-                  <text x="22" y="37" font-family="Geist" font-size="8" font-weight="700" fill="#fff" text-anchor="middle">J</text>
-                  <rect x="32" y="29" width="56" height="4" rx="2" fill="#fff" opacity="0.85"/>
-                  <rect x="32" y="36" width="40" height="3" rx="1.5" fill="#fff" opacity="0.45"/>
-                  <text x="184" y="37" font-family="Geist Mono, monospace" font-size="7" fill="#2ebb7b" text-anchor="end">● LIVE</text>
+                  <rect x="10" y="26" width="194" height="22" rx="3" fill="#fff" opacity="0.06"/>
+                  <circle cx="23" cy="37" r="8" fill="url(#portalBlue)"/>
+                  <text x="23" y="40.5" font-family="Geist" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">J</text>
+                  <rect x="36" y="31" width="60" height="4.5" rx="2" fill="#fff" opacity="0.85"/>
+                  <rect x="36" y="39" width="40" height="3.5" rx="1.5" fill="#fff" opacity="0.45"/>
+                  <text x="198" y="40" font-family="Geist Mono, monospace" font-size="8.5" font-weight="700" fill="#2ebb7b" text-anchor="end" letter-spacing="0.4">● LIVE</text>
 
-                  <!-- Chat bubble: customer -->
-                  <rect x="10" y="50" width="118" height="22" rx="6" fill="#fff" opacity="0.08"/>
-                  <rect x="16" y="56" width="100" height="3" rx="1.5" fill="#fff" opacity="0.85"/>
-                  <rect x="16" y="62" width="76" height="3" rx="1.5" fill="#fff" opacity="0.55"/>
+                  <!-- Chat bubble: customer (incoming) -->
+                  <rect x="10" y="54" width="120" height="22" rx="6" fill="#fff" opacity="0.10"/>
+                  <rect x="16" y="61" width="100" height="3" rx="1.5" fill="#fff" opacity="0.75"/>
+                  <rect x="16" y="68" width="70" height="3" rx="1.5" fill="#fff" opacity="0.5"/>
 
-                  <!-- Chat bubble: agent -->
-                  <rect x="80" y="78" width="118" height="22" rx="6" fill="url(#portalBlue)"/>
-                  <rect x="86" y="84" width="86" height="3" rx="1.5" fill="#fff" opacity="0.95"/>
-                  <rect x="86" y="90" width="106" height="3" rx="1.5" fill="#fff" opacity="0.75"/>
+                  <!-- Chat bubble: agent (outgoing) -->
+                  <rect x="78" y="80" width="126" height="22" rx="6" fill="url(#portalBlue)"/>
+                  <rect x="84" y="87" width="96" height="3" rx="1.5" fill="#fff" opacity="0.95"/>
+                  <rect x="84" y="94" width="70" height="3" rx="1.5" fill="#fff" opacity="0.75"/>
 
-                  <!-- Tools row (highlighted Photo) -->
-                  <rect x="10" y="108" width="188" height="26" rx="4" fill="#fff" opacity="0.04"/>
+                  <!-- Tools row -->
+                  <rect x="10" y="108" width="194" height="22" rx="4" fill="#fff" opacity="0.04"/>
                   <!-- Photo tool (active) -->
-                  <rect x="14" y="113" width="44" height="16" rx="3" fill="url(#portalBlue)"/>
-                  <!-- Camera icon -->
-                  <rect x="20" y="118" width="10" height="7" rx="1" fill="none" stroke="#fff" stroke-width="1"/>
-                  <circle cx="25" cy="121.5" r="2" fill="none" stroke="#fff" stroke-width="1"/>
-                  <text x="48" y="124" font-family="Geist Mono" font-size="6.5" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">PHOTO</text>
+                  <rect x="14" y="112" width="50" height="14" rx="3" fill="url(#portalBlue)"/>
+                  <rect x="20" y="116" width="9" height="7" rx="1" fill="none" stroke="#fff" stroke-width="1.1"/>
+                  <circle cx="24.5" cy="119.5" r="2" fill="none" stroke="#fff" stroke-width="1.1"/>
+                  <text x="48" y="122" font-family="Geist Mono, monospace" font-size="7.5" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">PHOTO</text>
                   <!-- Form tool -->
-                  <rect x="62" y="113" width="40" height="16" rx="3" fill="#fff" opacity="0.08"/>
-                  <text x="82" y="124" font-family="Geist Mono" font-size="6.5" font-weight="600" fill="#fff" text-anchor="middle" letter-spacing="0.5" opacity="0.8">FORM</text>
+                  <rect x="68" y="112" width="44" height="14" rx="3" fill="#fff" opacity="0.08"/>
+                  <text x="90" y="122" font-family="Geist Mono, monospace" font-size="7.5" font-weight="600" fill="#fff" text-anchor="middle" letter-spacing="0.5" opacity="0.85">FORM</text>
                   <!-- Pay tool -->
-                  <rect x="106" y="113" width="34" height="16" rx="3" fill="#fff" opacity="0.08"/>
-                  <text x="123" y="124" font-family="Geist Mono" font-size="6.5" font-weight="600" fill="#fff" text-anchor="middle" letter-spacing="0.5" opacity="0.8">PAY</text>
+                  <rect x="116" y="112" width="36" height="14" rx="3" fill="#fff" opacity="0.08"/>
+                  <text x="134" y="122" font-family="Geist Mono, monospace" font-size="7.5" font-weight="600" fill="#fff" text-anchor="middle" letter-spacing="0.5" opacity="0.85">PAY</text>
                   <!-- Share tool -->
-                  <rect x="144" y="113" width="50" height="16" rx="3" fill="#fff" opacity="0.08"/>
-                  <text x="169" y="124" font-family="Geist Mono" font-size="6.5" font-weight="600" fill="#fff" text-anchor="middle" letter-spacing="0.5" opacity="0.8">SHARE</text>
+                  <rect x="156" y="112" width="44" height="14" rx="3" fill="#fff" opacity="0.08"/>
+                  <text x="178" y="122" font-family="Geist Mono, monospace" font-size="7.5" font-weight="600" fill="#fff" text-anchor="middle" letter-spacing="0.5" opacity="0.85">SHARE</text>
 
-                  <!-- Label below laptop -->
-                  <rect x="40" y="148" width="128" height="6" rx="3" fill="#1a1d28"/>
-                  <text x="104" y="172" font-family="Geist Mono" font-size="8.5" font-weight="700" fill="#5b9bd5" text-anchor="middle" letter-spacing="0.8">AGENT DESKTOP</text>
+                  <!-- Laptop base lip -->
+                  <rect x="40" y="144" width="132" height="6" rx="3" fill="#1a1d28"/>
                 </g>
 
+                <!-- Label below desktop -->
+                <text x="112" y="180" font-family="Geist Mono, monospace" font-size="10" font-weight="700" fill="#5b9bd5" text-anchor="middle" letter-spacing="0.8">AGENT DESKTOP</text>
+
                 <!-- ==== MIDDLE: Flow arrow ==== -->
-                <g transform="translate(228,80)">
-                  <line x1="0" y1="10" x2="32" y2="10" stroke="#5b9bd5" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.6">
+                <g transform="translate(225,76)">
+                  <line x1="0" y1="14" x2="36" y2="14" stroke="#5b9bd5" stroke-width="1.8" stroke-dasharray="3 3" opacity="0.65">
                     <animate attributeName="stroke-dashoffset" values="0;-12" dur="1.2s" repeatCount="indefinite"/>
                   </line>
-                  <polygon points="30,5 38,10 30,15" fill="#5b9bd5"/>
-                  <text x="19" y="-2" font-family="Geist Mono" font-size="7" font-weight="700" fill="#5b9bd5" text-anchor="middle" letter-spacing="0.5">SENDS</text>
+                  <polygon points="32,8 42,14 32,20" fill="#5b9bd5"/>
+                  <text x="21" y="0" font-family="Geist Mono, monospace" font-size="8" font-weight="700" fill="#5b9bd5" text-anchor="middle" letter-spacing="0.6">SENDS</text>
                 </g>
 
                 <!-- ==== RIGHT: CUSTOMER PHONE ==== -->
-                <g transform="translate(270,8)">
+                <g transform="translate(274, 6)">
                   <!-- Phone outline -->
-                  <rect x="0" y="0" width="82" height="166" rx="12" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1.2"/>
-                  <rect x="3" y="3" width="76" height="160" rx="9" fill="#fff"/>
+                  <rect x="0" y="0" width="78" height="156" rx="11" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1.2"/>
+                  <rect x="3" y="3" width="72" height="150" rx="8" fill="#fff"/>
                   <!-- Notch -->
-                  <rect x="32" y="6" width="18" height="3" rx="1.5" fill="#0a0a0a"/>
+                  <rect x="30" y="6" width="18" height="3" rx="1.5" fill="#0a0a0a"/>
                   <!-- AI banner -->
-                  <rect x="7" y="14" width="68" height="12" rx="2" fill="#0a0a0a"/>
-                  <rect x="10" y="17" width="8" height="6" rx="1" fill="#ea4023"/>
-                  <text x="14" y="22" font-family="Geist Mono" font-size="5" font-weight="700" fill="#fff" text-anchor="middle">ai</text>
-                  <text x="48" y="22" font-family="Geist Mono" font-size="5" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.6">REQUEST</text>
+                  <rect x="7" y="14" width="64" height="14" rx="2.5" fill="#0a0a0a"/>
+                  <rect x="9" y="16" width="10" height="10" rx="1.5" fill="#ea4023"/>
+                  <text x="14" y="24" font-family="Geist Mono, monospace" font-size="7" font-weight="700" fill="#fff" text-anchor="middle">ai</text>
+                  <text x="47" y="24" font-family="Geist Mono, monospace" font-size="6.5" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">REQUEST</text>
                   <!-- Title -->
-                  <text x="41" y="40" font-family="Geist" font-size="7.5" font-weight="700" fill="#0a0a0a" text-anchor="middle">Take a photo</text>
-                  <text x="41" y="50" font-family="Geist" font-size="5" fill="#888" text-anchor="middle">of your card</text>
+                  <text x="39" y="44" font-family="Geist, sans-serif" font-size="9" font-weight="700" fill="#0a0a0a" text-anchor="middle">Take a photo</text>
+                  <text x="39" y="54" font-family="Geist, sans-serif" font-size="6.5" fill="#888" text-anchor="middle">of your card</text>
                   <!-- Camera viewfinder -->
-                  <rect x="10" y="56" width="62" height="74" rx="4" fill="#f0f0f0"/>
+                  <rect x="9" y="60" width="60" height="62" rx="4" fill="#f0f0f0"/>
                   <!-- Corner brackets -->
-                  <path d="M14 60 L14 64 M14 60 L18 60" stroke="#5b9bd5" stroke-width="1.5" fill="none"/>
-                  <path d="M68 60 L68 64 M68 60 L64 60" stroke="#5b9bd5" stroke-width="1.5" fill="none"/>
-                  <path d="M14 126 L14 122 M14 126 L18 126" stroke="#5b9bd5" stroke-width="1.5" fill="none"/>
-                  <path d="M68 126 L68 122 M68 126 L64 126" stroke="#5b9bd5" stroke-width="1.5" fill="none"/>
-                  <!-- Card silhouette in viewfinder -->
-                  <rect x="22" y="76" width="38" height="24" rx="2" fill="#5b9bd5" opacity="0.18"/>
-                  <rect x="26" y="82" width="14" height="2" rx="1" fill="#5b9bd5" opacity="0.5"/>
-                  <rect x="26" y="93" width="22" height="2" rx="1" fill="#5b9bd5" opacity="0.5"/>
+                  <path d="M14 64 L14 70 M14 64 L20 64" stroke="#5b9bd5" stroke-width="1.8" fill="none"/>
+                  <path d="M64 64 L64 70 M64 64 L58 64" stroke="#5b9bd5" stroke-width="1.8" fill="none"/>
+                  <path d="M14 118 L14 112 M14 118 L20 118" stroke="#5b9bd5" stroke-width="1.8" fill="none"/>
+                  <path d="M64 118 L64 112 M64 118 L58 118" stroke="#5b9bd5" stroke-width="1.8" fill="none"/>
+                  <!-- Card silhouette -->
+                  <rect x="20" y="78" width="38" height="24" rx="2" fill="#5b9bd5" opacity="0.18"/>
+                  <rect x="24" y="84" width="14" height="2" rx="1" fill="#5b9bd5" opacity="0.5"/>
+                  <rect x="24" y="94" width="22" height="2" rx="1" fill="#5b9bd5" opacity="0.5"/>
                   <!-- Capture button -->
-                  <circle cx="41" cy="146" r="9" fill="#fff" stroke="#5b9bd5" stroke-width="2"/>
-                  <circle cx="41" cy="146" r="6" fill="#5b9bd5"/>
-
-                  <!-- Label below phone -->
-                  <text x="41" y="180" font-family="Geist Mono" font-size="8.5" font-weight="700" fill="#5b9bd5" text-anchor="middle" letter-spacing="0.6">CUSTOMER</text>
+                  <circle cx="39" cy="138" r="10" fill="#fff" stroke="#5b9bd5" stroke-width="2"/>
+                  <circle cx="39" cy="138" r="6.5" fill="#5b9bd5"/>
                 </g>
+
+                <!-- Label below phone -->
+                <text x="313" y="180" font-family="Geist Mono, monospace" font-size="10" font-weight="700" fill="#5b9bd5" text-anchor="middle" letter-spacing="0.8">CUSTOMER</text>
               </svg>
             </div>
           </div>
