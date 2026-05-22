@@ -882,8 +882,15 @@ strong.hl-orange { color: var(--orange); font-weight: 700; }
   margin-bottom: 1.5rem;
 }
 
-/* Sequence (product 1) — centered vertically */
-.sequence { display: flex; flex-direction: column; gap: 0.55rem; margin-top: auto; margin-bottom: auto; }
+/* Sequence frame — fills remaining space and centers the rows vertically (cross-browser reliable) */
+.sequence-frame {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* Sequence (product 1) */
+.sequence { display: flex; flex-direction: column; gap: 0.55rem; }
 .seq-row { display: flex; align-items: center; gap: 0.45rem; }
 .seq-day {
   font-family: var(--font-mono);
