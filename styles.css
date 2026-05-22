@@ -705,39 +705,21 @@ strong.hl-orange { color: var(--orange); font-weight: 700; }
 .mm-wave span:nth-child(3n)  { animation-delay: 0.4s; }
 .mm-wave span:nth-child(5n)  { animation-delay: 0.6s; }
 
-/* Live Visual: blue waveform + video camera badge — mirrors voice side */
+/* Live Visual: single SVG with wave + video camera badge */
 .mm-visual {
   position: relative;
   width: 100%;
-  max-width: 320px;
-  height: 180px;
+  max-width: 340px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
-  filter: drop-shadow(0 0 24px rgba(91, 155, 213, 0.28));
+  filter: drop-shadow(0 0 28px rgba(91, 155, 213, 0.3));
 }
-.mm-wave-blue span  { background: linear-gradient(180deg, var(--blue), var(--blue-deep)); }
-.mm-cam-badge {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 78px;
-  height: 78px;
-  background: linear-gradient(135deg, var(--blue), var(--blue-deep));
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow:
-    0 0 0 6px rgba(91, 155, 213, 0.18),
-    0 0 30px rgba(91, 155, 213, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  z-index: 2;
-}
-.mm-cam-badge svg {
-  width: 48px;
-  height: 48px;
+.mm-vis-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 /* Phone image wrap (replaces CSS phone mockup) */
@@ -845,7 +827,7 @@ strong.hl-orange { color: var(--orange); font-weight: 700; }
 .product-visual {
   position: relative;
   padding: 1.5rem 1.5rem 1.25rem;
-  height: 290px;        /* fixed height -> bodies align */
+  height: 320px;        /* fixed height -> bodies align */
   overflow: hidden;
   display: flex;
   flex-direction: column;

@@ -187,35 +187,78 @@
           <img src="images/zappix-phone-financial.png" alt="" class="phone-image">
         </div>
 
-        <!-- Right: blue waveform + video camera badge (mirrors voice side) -->
+        <!-- Right: single SVG with wave + video camera badge -->
         <div class="mm-side mm-side-right">
           <div class="mm-side-tag mm-side-tag-blue">Live visual <span class="dot dot-blue"></span></div>
           <div class="mm-visual" aria-hidden="true">
-            <!-- Blue waveform (matches orange voice wave structure) -->
-            <div class="mm-wave mm-wave-blue" aria-hidden="true">
-              <span></span><span></span><span></span><span></span><span></span><span></span>
-              <span></span><span></span><span></span><span></span><span></span><span></span>
-              <span></span><span></span><span></span><span></span><span></span><span></span>
-              <span></span><span></span><span></span><span></span><span></span><span></span>
-              <span></span><span></span><span></span><span></span><span></span><span></span>
-            </div>
-            <!-- Video camera badge in center -->
-            <div class="mm-cam-badge" aria-hidden="true">
-              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                <!-- Outer ring pulse -->
-                <circle cx="32" cy="32" r="30" fill="none" stroke="#fff" stroke-width="1" opacity="0.3"/>
-                <!-- Video camera body -->
-                <rect x="14" y="22" width="24" height="20" rx="3" fill="#fff"/>
-                <!-- Lens cone -->
-                <polygon points="38,26 50,18 50,46 38,38" fill="#fff"/>
-                <!-- Lens dark center -->
-                <circle cx="44" cy="32" r="3" fill="#2a6fb8"/>
-                <!-- REC dot (pulsing) -->
-                <circle cx="20" cy="28" r="2.5" fill="#ea4023">
-                  <animate attributeName="opacity" values="1;0.25;1" dur="1.4s" repeatCount="indefinite"/>
+            <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" class="mm-vis-svg" preserveAspectRatio="xMidYMid meet">
+              <defs>
+                <linearGradient id="vWaveBlue" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#5b9bd5"/>
+                  <stop offset="100%" stop-color="#2a6fb8"/>
+                </linearGradient>
+                <linearGradient id="vBadgeBlue" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#5b9bd5"/>
+                  <stop offset="100%" stop-color="#2a6fb8"/>
+                </linearGradient>
+              </defs>
+
+              <!-- Wave bars (30 bars in voice-wave pattern, animated) -->
+              <g fill="url(#vWaveBlue)">
+                <rect x="20.0" y="92.0" width="5" height="16.0" rx="2"><animate attributeName="height" values="6.4;16.0;6.4" dur="1.6s" repeatCount="indefinite" begin="0.00s"/><animate attributeName="y" values="96.8;92.0;96.8" dur="1.6s" repeatCount="indefinite" begin="0.00s"/></rect>
+                <rect x="29.5" y="85.6" width="5" height="28.8" rx="2"><animate attributeName="height" values="11.5;28.8;11.5" dur="1.6s" repeatCount="indefinite" begin="0.05s"/><animate attributeName="y" values="94.2;85.6;94.2" dur="1.6s" repeatCount="indefinite" begin="0.05s"/></rect>
+                <rect x="39.0" y="77.6" width="5" height="44.8" rx="2"><animate attributeName="height" values="17.9;44.8;17.9" dur="1.6s" repeatCount="indefinite" begin="0.10s"/><animate attributeName="y" values="91.0;77.6;91.0" dur="1.6s" repeatCount="indefinite" begin="0.10s"/></rect>
+                <rect x="48.5" y="69.6" width="5" height="60.8" rx="2"><animate attributeName="height" values="24.3;60.8;24.3" dur="1.6s" repeatCount="indefinite" begin="0.15s"/><animate attributeName="y" values="87.8;69.6;87.8" dur="1.6s" repeatCount="indefinite" begin="0.15s"/></rect>
+                <rect x="58.0" y="60.0" width="5" height="80.0" rx="2"><animate attributeName="height" values="32.0;80.0;32.0" dur="1.6s" repeatCount="indefinite" begin="0.20s"/><animate attributeName="y" values="84.0;60.0;84.0" dur="1.6s" repeatCount="indefinite" begin="0.20s"/></rect>
+                <rect x="67.5" y="50.4" width="5" height="99.2" rx="2"><animate attributeName="height" values="39.7;99.2;39.7" dur="1.6s" repeatCount="indefinite" begin="0.25s"/><animate attributeName="y" values="80.2;50.4;80.2" dur="1.6s" repeatCount="indefinite" begin="0.25s"/></rect>
+                <rect x="77.0" y="40.0" width="5" height="120.0" rx="2"><animate attributeName="height" values="48.0;120.0;48.0" dur="1.6s" repeatCount="indefinite" begin="0.30s"/><animate attributeName="y" values="76.0;40.0;76.0" dur="1.6s" repeatCount="indefinite" begin="0.30s"/></rect>
+                <rect x="86.5" y="31.2" width="5" height="137.6" rx="2"><animate attributeName="height" values="55.0;137.6;55.0" dur="1.6s" repeatCount="indefinite" begin="0.35s"/><animate attributeName="y" values="72.5;31.2;72.5" dur="1.6s" repeatCount="indefinite" begin="0.35s"/></rect>
+                <rect x="96.0" y="26.4" width="5" height="147.2" rx="2"><animate attributeName="height" values="58.9;147.2;58.9" dur="1.6s" repeatCount="indefinite" begin="0.40s"/><animate attributeName="y" values="70.6;26.4;70.6" dur="1.6s" repeatCount="indefinite" begin="0.40s"/></rect>
+                <rect x="105.5" y="23.2" width="5" height="153.6" rx="2"><animate attributeName="height" values="61.4;153.6;61.4" dur="1.6s" repeatCount="indefinite" begin="0.45s"/><animate attributeName="y" values="69.3;23.2;69.3" dur="1.6s" repeatCount="indefinite" begin="0.45s"/></rect>
+                <rect x="115.0" y="20.0" width="5" height="160.0" rx="2"><animate attributeName="height" values="64.0;160.0;64.0" dur="1.6s" repeatCount="indefinite" begin="0.50s"/><animate attributeName="y" values="68.0;20.0;68.0" dur="1.6s" repeatCount="indefinite" begin="0.50s"/></rect>
+                <rect x="124.5" y="23.2" width="5" height="153.6" rx="2"><animate attributeName="height" values="61.4;153.6;61.4" dur="1.6s" repeatCount="indefinite" begin="0.55s"/><animate attributeName="y" values="69.3;23.2;69.3" dur="1.6s" repeatCount="indefinite" begin="0.55s"/></rect>
+                <rect x="134.0" y="28.0" width="5" height="144.0" rx="2"><animate attributeName="height" values="57.6;144.0;57.6" dur="1.6s" repeatCount="indefinite" begin="0.60s"/><animate attributeName="y" values="71.2;28.0;71.2" dur="1.6s" repeatCount="indefinite" begin="0.60s"/></rect>
+                <rect x="143.5" y="36.0" width="5" height="128.0" rx="2"><animate attributeName="height" values="51.2;128.0;51.2" dur="1.6s" repeatCount="indefinite" begin="0.65s"/><animate attributeName="y" values="74.4;36.0;74.4" dur="1.6s" repeatCount="indefinite" begin="0.65s"/></rect>
+                <rect x="153.0" y="44.0" width="5" height="112.0" rx="2"><animate attributeName="height" values="44.8;112.0;44.8" dur="1.6s" repeatCount="indefinite" begin="0.70s"/><animate attributeName="y" values="77.6;44.0;77.6" dur="1.6s" repeatCount="indefinite" begin="0.70s"/></rect>
+                <rect x="162.5" y="52.0" width="5" height="96.0" rx="2"><animate attributeName="height" values="38.4;96.0;38.4" dur="1.6s" repeatCount="indefinite" begin="0.75s"/><animate attributeName="y" values="80.8;52.0;80.8" dur="1.6s" repeatCount="indefinite" begin="0.75s"/></rect>
+                <rect x="172.0" y="60.0" width="5" height="80.0" rx="2"><animate attributeName="height" values="32.0;80.0;32.0" dur="1.6s" repeatCount="indefinite" begin="0.80s"/><animate attributeName="y" values="84.0;60.0;84.0" dur="1.6s" repeatCount="indefinite" begin="0.80s"/></rect>
+                <rect x="181.5" y="68.0" width="5" height="64.0" rx="2"><animate attributeName="height" values="25.6;64.0;25.6" dur="1.6s" repeatCount="indefinite" begin="0.85s"/><animate attributeName="y" values="87.2;68.0;87.2" dur="1.6s" repeatCount="indefinite" begin="0.85s"/></rect>
+                <rect x="191.0" y="74.4" width="5" height="51.2" rx="2"><animate attributeName="height" values="20.5;51.2;20.5" dur="1.6s" repeatCount="indefinite" begin="0.90s"/><animate attributeName="y" values="89.8;74.4;89.8" dur="1.6s" repeatCount="indefinite" begin="0.90s"/></rect>
+                <rect x="200.5" y="80.8" width="5" height="38.4" rx="2"><animate attributeName="height" values="15.4;38.4;15.4" dur="1.6s" repeatCount="indefinite" begin="0.95s"/><animate attributeName="y" values="92.3;80.8;92.3" dur="1.6s" repeatCount="indefinite" begin="0.95s"/></rect>
+                <rect x="210.0" y="85.6" width="5" height="28.8" rx="2"><animate attributeName="height" values="11.5;28.8;11.5" dur="1.6s" repeatCount="indefinite" begin="1.00s"/><animate attributeName="y" values="94.2;85.6;94.2" dur="1.6s" repeatCount="indefinite" begin="1.00s"/></rect>
+                <rect x="219.5" y="88.8" width="5" height="22.4" rx="2"><animate attributeName="height" values="9.0;22.4;9.0" dur="1.6s" repeatCount="indefinite" begin="1.05s"/><animate attributeName="y" values="95.5;88.8;95.5" dur="1.6s" repeatCount="indefinite" begin="1.05s"/></rect>
+                <rect x="229.0" y="90.4" width="5" height="19.2" rx="2"><animate attributeName="height" values="7.7;19.2;7.7" dur="1.6s" repeatCount="indefinite" begin="1.10s"/><animate attributeName="y" values="96.2;90.4;96.2" dur="1.6s" repeatCount="indefinite" begin="1.10s"/></rect>
+                <rect x="238.5" y="92.0" width="5" height="16.0" rx="2"><animate attributeName="height" values="6.4;16.0;6.4" dur="1.6s" repeatCount="indefinite" begin="1.15s"/><animate attributeName="y" values="96.8;92.0;96.8" dur="1.6s" repeatCount="indefinite" begin="1.15s"/></rect>
+                <rect x="248.0" y="92.8" width="5" height="14.4" rx="2"><animate attributeName="height" values="5.8;14.4;5.8" dur="1.6s" repeatCount="indefinite" begin="1.20s"/><animate attributeName="y" values="97.1;92.8;97.1" dur="1.6s" repeatCount="indefinite" begin="1.20s"/></rect>
+                <rect x="257.5" y="93.6" width="5" height="12.8" rx="2"><animate attributeName="height" values="5.1;12.8;5.1" dur="1.6s" repeatCount="indefinite" begin="1.25s"/><animate attributeName="y" values="97.4;93.6;97.4" dur="1.6s" repeatCount="indefinite" begin="1.25s"/></rect>
+                <rect x="267.0" y="94.4" width="5" height="11.2" rx="2"><animate attributeName="height" values="4.5;11.2;4.5" dur="1.6s" repeatCount="indefinite" begin="1.30s"/><animate attributeName="y" values="97.8;94.4;97.8" dur="1.6s" repeatCount="indefinite" begin="1.30s"/></rect>
+                <rect x="276.5" y="95.2" width="5" height="9.6" rx="2"><animate attributeName="height" values="3.8;9.6;3.8" dur="1.6s" repeatCount="indefinite" begin="1.35s"/><animate attributeName="y" values="98.1;95.2;98.1" dur="1.6s" repeatCount="indefinite" begin="1.35s"/></rect>
+                <rect x="286.0" y="96.0" width="5" height="8.0" rx="2"><animate attributeName="height" values="3.2;8.0;3.2" dur="1.6s" repeatCount="indefinite" begin="1.40s"/><animate attributeName="y" values="98.4;96.0;98.4" dur="1.6s" repeatCount="indefinite" begin="1.40s"/></rect>
+                <rect x="295.5" y="96.8" width="5" height="6.4" rx="2"><animate attributeName="height" values="2.6;6.4;2.6" dur="1.6s" repeatCount="indefinite" begin="1.45s"/><animate attributeName="y" values="98.7;96.8;98.7" dur="1.6s" repeatCount="indefinite" begin="1.45s"/></rect>
+              </g>
+
+              <!-- Video camera badge in center -->
+              <g transform="translate(160,100)">
+                <!-- Outer pulsing ring -->
+                <circle r="44" fill="none" stroke="#5b9bd5" stroke-width="1.5" opacity="0.35">
+                  <animate attributeName="r" values="42;52;42" dur="2s" repeatCount="indefinite"/>
+                  <animate attributeName="opacity" values="0.5;0;0.5" dur="2s" repeatCount="indefinite"/>
                 </circle>
-              </svg>
-            </div>
+                <!-- Solid badge -->
+                <circle r="38" fill="url(#vBadgeBlue)"/>
+                <circle r="38" fill="none" stroke="#fff" stroke-width="1" opacity="0.2"/>
+                <!-- Camera body -->
+                <rect x="-16" y="-10" width="24" height="20" rx="3" fill="#fff"/>
+                <!-- Lens cone -->
+                <polygon points="8,-6 20,-14 20,14 8,6" fill="#fff"/>
+                <!-- Lens dark center -->
+                <circle cx="14" cy="0" r="3.5" fill="#2a6fb8"/>
+                <!-- REC indicator -->
+                <circle cx="-10" cy="-4" r="2.2" fill="#ea4023">
+                  <animate attributeName="opacity" values="1;0.2;1" dur="1.2s" repeatCount="indefinite"/>
+                </circle>
+              </g>
+            </svg>
           </div>
         </div>
       </div>
@@ -311,7 +354,7 @@
             <div class="product-glow product-glow-mixed" aria-hidden="true"></div>
             <div class="product-visual-label">Voice + AI + Visual · Synchronized</div>
             <div class="ss-tri" aria-hidden="true">
-              <svg viewBox="0 0 360 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" class="ss-tri-svg">
+              <svg viewBox="0 0 360 260" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" class="ss-tri-svg">
                 <defs>
                   <linearGradient id="ssOrange" x1="0" y1="0" x2="1" y2="1">
                     <stop offset="0%" stop-color="#f28e1e"/>
@@ -324,96 +367,92 @@
                 </defs>
 
                 <!-- Flow lines -->
-                <line x1="90" y1="80" x2="130" y2="80" stroke="#f28e1e" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.55">
+                <line x1="92" y1="110" x2="130" y2="110" stroke="#f28e1e" stroke-width="2" stroke-dasharray="3 3" opacity="0.6">
                   <animate attributeName="stroke-dashoffset" values="0;-12" dur="1.2s" repeatCount="indefinite"/>
                 </line>
-                <line x1="230" y1="80" x2="270" y2="80" stroke="#5b9bd5" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.55">
+                <line x1="230" y1="110" x2="270" y2="110" stroke="#5b9bd5" stroke-width="2" stroke-dasharray="3 3" opacity="0.6">
                   <animate attributeName="stroke-dashoffset" values="0;-12" dur="1.2s" repeatCount="indefinite"/>
                 </line>
 
                 <!-- LEFT: Voice / mic icon -->
-                <g transform="translate(25,28)">
+                <g transform="translate(22,42)">
                   <!-- Mic body -->
-                  <rect x="22" y="8" width="22" height="42" rx="11" fill="url(#ssOrange)"/>
+                  <rect x="22" y="8" width="26" height="50" rx="13" fill="url(#ssOrange)"/>
                   <!-- Mic stand arc -->
-                  <path d="M8 46 Q8 68, 33 68 Q58 68, 58 46" stroke="#f28e1e" stroke-width="2.8" fill="none"/>
+                  <path d="M6 54 Q6 82, 35 82 Q64 82, 64 54" stroke="#f28e1e" stroke-width="3.2" fill="none"/>
                   <!-- Stem -->
-                  <line x1="33" y1="68" x2="33" y2="86" stroke="#f28e1e" stroke-width="2.8"/>
-                  <line x1="20" y1="86" x2="46" y2="86" stroke="#f28e1e" stroke-width="2.8"/>
+                  <line x1="35" y1="82" x2="35" y2="104" stroke="#f28e1e" stroke-width="3.2"/>
+                  <line x1="20" y1="104" x2="50" y2="104" stroke="#f28e1e" stroke-width="3.2"/>
                   <!-- Sound waves -->
-                  <path d="M62 32 Q72 46, 62 60" stroke="#ea4023" stroke-width="2.2" fill="none" opacity="0.7">
+                  <path d="M68 36 Q80 54, 68 72" stroke="#ea4023" stroke-width="2.6" fill="none" opacity="0.7">
                     <animate attributeName="opacity" values="0.3;0.9;0.3" dur="1.5s" repeatCount="indefinite"/>
                   </path>
-                  <path d="M68 24 Q82 46, 68 68" stroke="#ea4023" stroke-width="2.2" fill="none" opacity="0.5">
+                  <path d="M76 28 Q92 54, 76 80" stroke="#ea4023" stroke-width="2.6" fill="none" opacity="0.5">
                     <animate attributeName="opacity" values="0.2;0.7;0.2" dur="1.5s" repeatCount="indefinite" begin="0.3s"/>
                   </path>
-                  <!-- Label -->
-                  <text x="33" y="124" font-family="Geist Mono, monospace" font-size="10" font-weight="700" fill="#f28e1e" text-anchor="middle" letter-spacing="0.8">VOICE</text>
                 </g>
+                <text x="58" y="192" font-family="Geist Mono, monospace" font-size="13" font-weight="700" fill="#f28e1e" text-anchor="middle" letter-spacing="0.8">VOICE</text>
 
                 <!-- MIDDLE: AI hexagonal core -->
-                <g transform="translate(140,18)">
+                <g transform="translate(140,28)">
                   <!-- Glow -->
-                  <circle cx="40" cy="55" r="42" fill="#ea4023" opacity="0.2">
-                    <animate attributeName="r" values="38;46;38" dur="2s" repeatCount="indefinite"/>
+                  <circle cx="45" cy="65" r="50" fill="#ea4023" opacity="0.2">
+                    <animate attributeName="r" values="46;56;46" dur="2s" repeatCount="indefinite"/>
                   </circle>
                   <!-- Hexagon -->
-                  <polygon points="40,13 73,32 73,78 40,97 7,78 7,32" fill="url(#ssOrange)" stroke="#ea4023" stroke-width="1"/>
+                  <polygon points="45,15 84,38 84,92 45,115 6,92 6,38" fill="url(#ssOrange)" stroke="#ea4023" stroke-width="1.2"/>
                   <!-- AI text -->
-                  <text x="40" y="62" font-family="Geist, sans-serif" font-size="25" font-weight="700" fill="#fff" text-anchor="middle">AI</text>
+                  <text x="45" y="74" font-family="Geist, sans-serif" font-size="30" font-weight="700" fill="#fff" text-anchor="middle">AI</text>
                   <!-- Activity bars -->
-                  <rect x="27" y="72" width="2.2" height="6" rx="1" fill="#fff" opacity="0.85">
-                    <animate attributeName="height" values="3;10;3" dur="1s" repeatCount="indefinite"/>
+                  <rect x="30" y="86" width="2.6" height="7" rx="1" fill="#fff" opacity="0.85">
+                    <animate attributeName="height" values="3;12;3" dur="1s" repeatCount="indefinite"/>
                   </rect>
-                  <rect x="32" y="70" width="2.2" height="10" rx="1" fill="#fff" opacity="0.85">
-                    <animate attributeName="height" values="6;12;6" dur="1s" repeatCount="indefinite" begin="0.2s"/>
+                  <rect x="36" y="84" width="2.6" height="11" rx="1" fill="#fff" opacity="0.85">
+                    <animate attributeName="height" values="6;14;6" dur="1s" repeatCount="indefinite" begin="0.2s"/>
                   </rect>
-                  <rect x="37" y="68" width="2.2" height="12" rx="1" fill="#fff" opacity="0.95">
-                    <animate attributeName="height" values="10;14;10" dur="1s" repeatCount="indefinite" begin="0.1s"/>
+                  <rect x="42" y="82" width="2.6" height="14" rx="1" fill="#fff" opacity="0.95">
+                    <animate attributeName="height" values="10;16;10" dur="1s" repeatCount="indefinite" begin="0.1s"/>
                   </rect>
-                  <rect x="42" y="70" width="2.2" height="10" rx="1" fill="#fff" opacity="0.85">
-                    <animate attributeName="height" values="6;12;6" dur="1s" repeatCount="indefinite" begin="0.3s"/>
+                  <rect x="48" y="84" width="2.6" height="11" rx="1" fill="#fff" opacity="0.85">
+                    <animate attributeName="height" values="6;14;6" dur="1s" repeatCount="indefinite" begin="0.3s"/>
                   </rect>
-                  <rect x="47" y="72" width="2.2" height="6" rx="1" fill="#fff" opacity="0.85">
-                    <animate attributeName="height" values="3;10;3" dur="1s" repeatCount="indefinite" begin="0.4s"/>
+                  <rect x="54" y="86" width="2.6" height="7" rx="1" fill="#fff" opacity="0.85">
+                    <animate attributeName="height" values="3;12;3" dur="1s" repeatCount="indefinite" begin="0.4s"/>
                   </rect>
-                  <!-- Label -->
-                  <text x="40" y="134" font-family="Geist Mono, monospace" font-size="10" font-weight="700" fill="#f28e1e" text-anchor="middle" letter-spacing="0.8">AI CORE</text>
                 </g>
+                <text x="185" y="192" font-family="Geist Mono, monospace" font-size="13" font-weight="700" fill="#f28e1e" text-anchor="middle" letter-spacing="0.8">AI CORE</text>
 
                 <!-- RIGHT: Realistic mini phone (VISUAL) -->
-                <g transform="translate(272, 16)">
+                <g transform="translate(268, 22)">
                   <!-- Phone body -->
-                  <rect x="0" y="0" width="56" height="118" rx="10" fill="#1a1a1a" stroke="#5b9bd5" stroke-width="1.3"/>
+                  <rect x="0" y="0" width="70" height="148" rx="12" fill="#1a1a1a" stroke="#5b9bd5" stroke-width="1.5"/>
                   <!-- Screen -->
-                  <rect x="3" y="3" width="50" height="112" rx="7" fill="#fff"/>
+                  <rect x="3" y="3" width="64" height="142" rx="9" fill="#fff"/>
                   <!-- Notch -->
-                  <rect x="20" y="6" width="16" height="3" rx="1.5" fill="#0a0a0a"/>
+                  <rect x="25" y="7" width="20" height="3.5" rx="1.75" fill="#0a0a0a"/>
                   <!-- AI status banner -->
-                  <rect x="6" y="14" width="44" height="13" rx="2.5" fill="#0a0a0a"/>
-                  <rect x="8" y="16" width="9" height="9" rx="1.5" fill="#ea4023"/>
-                  <text x="12.5" y="23" font-family="Geist Mono, monospace" font-size="6.5" font-weight="700" fill="#fff" text-anchor="middle">ai</text>
-                  <text x="35" y="23" font-family="Geist Mono, monospace" font-size="5.5" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.4">FINANCIAL</text>
+                  <rect x="7" y="17" width="56" height="16" rx="3" fill="#0a0a0a"/>
+                  <rect x="9" y="19" width="11" height="12" rx="1.5" fill="#ea4023"/>
+                  <text x="14.5" y="28" font-family="Geist Mono, monospace" font-size="8" font-weight="700" fill="#fff" text-anchor="middle">ai</text>
+                  <text x="42" y="28" font-family="Geist Mono, monospace" font-size="7" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.4">FINANCIAL</text>
                   <!-- Image content area -->
-                  <rect x="6" y="31" width="44" height="30" rx="3" fill="#5b9bd5" opacity="0.55">
+                  <rect x="7" y="38" width="56" height="38" rx="4" fill="#5b9bd5" opacity="0.55">
                     <animate attributeName="opacity" values="0.3;0.75;0.3" dur="2.2s" repeatCount="indefinite"/>
                   </rect>
                   <!-- Camera/lens icon in image area -->
-                  <circle cx="28" cy="46" r="6" fill="none" stroke="#fff" stroke-width="1.4" opacity="0.95"/>
-                  <circle cx="28" cy="46" r="2.5" fill="#fff" opacity="0.9"/>
+                  <circle cx="35" cy="57" r="8" fill="none" stroke="#fff" stroke-width="1.8" opacity="0.95"/>
+                  <circle cx="35" cy="57" r="3" fill="#fff" opacity="0.9"/>
                   <!-- Text lines -->
-                  <rect x="6" y="66" width="32" height="3" rx="1.5" fill="#0a0a0a" opacity="0.8"/>
-                  <rect x="6" y="71.5" width="38" height="2.5" rx="1.25" fill="#0a0a0a" opacity="0.45"/>
-                  <rect x="6" y="76" width="26" height="2.5" rx="1.25" fill="#0a0a0a" opacity="0.45"/>
+                  <rect x="7" y="82" width="42" height="4" rx="2" fill="#0a0a0a" opacity="0.8"/>
+                  <rect x="7" y="90" width="48" height="3" rx="1.5" fill="#0a0a0a" opacity="0.45"/>
+                  <rect x="7" y="96" width="34" height="3" rx="1.5" fill="#0a0a0a" opacity="0.45"/>
                   <!-- CTA button -->
-                  <rect x="6" y="84" width="44" height="9" rx="4.5" fill="url(#ssBlue)"/>
-                  <rect x="20" y="87.5" width="16" height="2" rx="1" fill="#fff"/>
+                  <rect x="7" y="106" width="56" height="12" rx="6" fill="url(#ssBlue)"/>
+                  <rect x="26" y="111" width="18" height="2.5" rx="1.25" fill="#fff"/>
                   <!-- Home indicator -->
-                  <line x1="20" y1="107" x2="36" y2="107" stroke="#0a0a0a" stroke-width="2" stroke-linecap="round"/>
-
-                  <!-- Label -->
-                  <text x="28" y="140" font-family="Geist Mono, monospace" font-size="10" font-weight="700" fill="#5b9bd5" text-anchor="middle" letter-spacing="0.8">VISUAL</text>
+                  <line x1="25" y1="135" x2="45" y2="135" stroke="#0a0a0a" stroke-width="2.5" stroke-linecap="round"/>
                 </g>
+                <text x="303" y="192" font-family="Geist Mono, monospace" font-size="13" font-weight="700" fill="#5b9bd5" text-anchor="middle" letter-spacing="0.8">VISUAL</text>
               </svg>
             </div>
           </div>
@@ -436,7 +475,7 @@
             <div class="product-glow product-glow-blue" aria-hidden="true"></div>
             <div class="product-visual-label">Agent messaging portal</div>
             <div class="portal" aria-hidden="true">
-              <svg viewBox="0 0 360 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" class="portal-svg">
+              <svg viewBox="0 0 360 260" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" class="portal-svg">
                 <defs>
                   <linearGradient id="portalBlue" x1="0" y1="0" x2="1" y2="1">
                     <stop offset="0%" stop-color="#5b9bd5"/>
@@ -448,101 +487,101 @@
                   </linearGradient>
                 </defs>
 
-                <!-- ==== LEFT: AGENT DESKTOP / LAPTOP ==== -->
-                <g transform="translate(6,14)">
+                <!-- ==== LEFT: AGENT DESKTOP / LAPTOP (bigger) ==== -->
+                <g transform="translate(4,18)">
                   <!-- Laptop screen frame -->
-                  <rect x="0" y="0" width="212" height="142" rx="9" fill="#1a1d28" stroke="#5b9bd5" stroke-width="1.2" opacity="0.95"/>
-                  <rect x="5" y="5" width="202" height="132" rx="5" fill="url(#portalScreen)"/>
+                  <rect x="0" y="0" width="220" height="186" rx="10" fill="#1a1d28" stroke="#5b9bd5" stroke-width="1.4" opacity="0.95"/>
+                  <rect x="5" y="5" width="210" height="176" rx="6" fill="url(#portalScreen)"/>
                   <!-- Browser chrome -->
-                  <rect x="5" y="5" width="202" height="16" rx="5" fill="#0d1019"/>
-                  <circle cx="14" cy="13" r="2.8" fill="#ea4023"/>
-                  <circle cx="23" cy="13" r="2.8" fill="#f28e1e"/>
-                  <circle cx="32" cy="13" r="2.8" fill="#2ebb7b"/>
+                  <rect x="5" y="5" width="210" height="20" rx="6" fill="#0d1019"/>
+                  <circle cx="16" cy="15" r="3.4" fill="#ea4023"/>
+                  <circle cx="27" cy="15" r="3.4" fill="#f28e1e"/>
+                  <circle cx="38" cy="15" r="3.4" fill="#2ebb7b"/>
 
                   <!-- Customer info bar -->
-                  <rect x="10" y="26" width="194" height="22" rx="3" fill="#fff" opacity="0.06"/>
-                  <circle cx="23" cy="37" r="8" fill="url(#portalBlue)"/>
-                  <text x="23" y="40.5" font-family="Geist" font-size="10" font-weight="700" fill="#fff" text-anchor="middle">J</text>
-                  <rect x="36" y="31" width="60" height="4.5" rx="2" fill="#fff" opacity="0.85"/>
-                  <rect x="36" y="39" width="40" height="3.5" rx="1.5" fill="#fff" opacity="0.45"/>
-                  <text x="198" y="40" font-family="Geist Mono, monospace" font-size="8.5" font-weight="700" fill="#2ebb7b" text-anchor="end" letter-spacing="0.4">● LIVE</text>
+                  <rect x="11" y="32" width="200" height="28" rx="4" fill="#fff" opacity="0.06"/>
+                  <circle cx="27" cy="46" r="10" fill="url(#portalBlue)"/>
+                  <text x="27" y="50" font-family="Geist, sans-serif" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">J</text>
+                  <rect x="43" y="38" width="76" height="5.5" rx="2.5" fill="#fff" opacity="0.9"/>
+                  <rect x="43" y="48" width="50" height="4" rx="2" fill="#fff" opacity="0.5"/>
+                  <text x="205" y="50" font-family="Geist Mono, monospace" font-size="10" font-weight="700" fill="#2ebb7b" text-anchor="end" letter-spacing="0.4">● LIVE</text>
 
                   <!-- Chat bubble: customer (incoming) -->
-                  <rect x="10" y="54" width="120" height="22" rx="6" fill="#fff" opacity="0.10"/>
-                  <rect x="16" y="61" width="100" height="3" rx="1.5" fill="#fff" opacity="0.75"/>
-                  <rect x="16" y="68" width="70" height="3" rx="1.5" fill="#fff" opacity="0.5"/>
+                  <rect x="11" y="68" width="130" height="28" rx="7" fill="#fff" opacity="0.10"/>
+                  <rect x="19" y="76" width="110" height="3.5" rx="1.75" fill="#fff" opacity="0.75"/>
+                  <rect x="19" y="84" width="78" height="3.5" rx="1.75" fill="#fff" opacity="0.5"/>
 
                   <!-- Chat bubble: agent (outgoing) -->
-                  <rect x="78" y="80" width="126" height="22" rx="6" fill="url(#portalBlue)"/>
-                  <rect x="84" y="87" width="96" height="3" rx="1.5" fill="#fff" opacity="0.95"/>
-                  <rect x="84" y="94" width="70" height="3" rx="1.5" fill="#fff" opacity="0.75"/>
+                  <rect x="80" y="104" width="132" height="28" rx="7" fill="url(#portalBlue)"/>
+                  <rect x="88" y="112" width="108" height="3.5" rx="1.75" fill="#fff" opacity="0.95"/>
+                  <rect x="88" y="120" width="74" height="3.5" rx="1.75" fill="#fff" opacity="0.75"/>
 
                   <!-- Tools row -->
-                  <rect x="10" y="108" width="194" height="22" rx="4" fill="#fff" opacity="0.04"/>
+                  <rect x="11" y="142" width="200" height="30" rx="5" fill="#fff" opacity="0.04"/>
                   <!-- Photo tool (active) -->
-                  <rect x="14" y="112" width="50" height="14" rx="3" fill="url(#portalBlue)"/>
-                  <rect x="20" y="116" width="9" height="7" rx="1" fill="none" stroke="#fff" stroke-width="1.1"/>
-                  <circle cx="24.5" cy="119.5" r="2" fill="none" stroke="#fff" stroke-width="1.1"/>
-                  <text x="48" y="122" font-family="Geist Mono, monospace" font-size="7.5" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">PHOTO</text>
+                  <rect x="15" y="147" width="58" height="20" rx="4" fill="url(#portalBlue)"/>
+                  <rect x="22" y="153" width="11" height="9" rx="1.5" fill="none" stroke="#fff" stroke-width="1.3"/>
+                  <circle cx="27.5" cy="157.5" r="2.4" fill="none" stroke="#fff" stroke-width="1.3"/>
+                  <text x="52" y="160" font-family="Geist Mono, monospace" font-size="9" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">PHOTO</text>
                   <!-- Form tool -->
-                  <rect x="68" y="112" width="44" height="14" rx="3" fill="#fff" opacity="0.08"/>
-                  <text x="90" y="122" font-family="Geist Mono, monospace" font-size="7.5" font-weight="600" fill="#fff" text-anchor="middle" letter-spacing="0.5" opacity="0.85">FORM</text>
+                  <rect x="77" y="147" width="48" height="20" rx="4" fill="#fff" opacity="0.08"/>
+                  <text x="101" y="160" font-family="Geist Mono, monospace" font-size="9" font-weight="600" fill="#fff" text-anchor="middle" letter-spacing="0.5" opacity="0.85">FORM</text>
                   <!-- Pay tool -->
-                  <rect x="116" y="112" width="36" height="14" rx="3" fill="#fff" opacity="0.08"/>
-                  <text x="134" y="122" font-family="Geist Mono, monospace" font-size="7.5" font-weight="600" fill="#fff" text-anchor="middle" letter-spacing="0.5" opacity="0.85">PAY</text>
+                  <rect x="129" y="147" width="40" height="20" rx="4" fill="#fff" opacity="0.08"/>
+                  <text x="149" y="160" font-family="Geist Mono, monospace" font-size="9" font-weight="600" fill="#fff" text-anchor="middle" letter-spacing="0.5" opacity="0.85">PAY</text>
                   <!-- Share tool -->
-                  <rect x="156" y="112" width="44" height="14" rx="3" fill="#fff" opacity="0.08"/>
-                  <text x="178" y="122" font-family="Geist Mono, monospace" font-size="7.5" font-weight="600" fill="#fff" text-anchor="middle" letter-spacing="0.5" opacity="0.85">SHARE</text>
+                  <rect x="173" y="147" width="38" height="20" rx="4" fill="#fff" opacity="0.08"/>
+                  <text x="192" y="160" font-family="Geist Mono, monospace" font-size="9" font-weight="600" fill="#fff" text-anchor="middle" letter-spacing="0.5" opacity="0.85">SHARE</text>
 
                   <!-- Laptop base lip -->
-                  <rect x="40" y="144" width="132" height="6" rx="3" fill="#1a1d28"/>
+                  <rect x="40" y="188" width="140" height="7" rx="3.5" fill="#1a1d28"/>
                 </g>
 
                 <!-- Label below desktop -->
-                <text x="112" y="180" font-family="Geist Mono, monospace" font-size="10" font-weight="700" fill="#5b9bd5" text-anchor="middle" letter-spacing="0.8">AGENT DESKTOP</text>
+                <text x="114" y="234" font-family="Geist Mono, monospace" font-size="13" font-weight="700" fill="#5b9bd5" text-anchor="middle" letter-spacing="0.8">AGENT DESKTOP</text>
 
                 <!-- ==== MIDDLE: Flow arrow ==== -->
-                <g transform="translate(225,76)">
-                  <line x1="0" y1="14" x2="36" y2="14" stroke="#5b9bd5" stroke-width="1.8" stroke-dasharray="3 3" opacity="0.65">
+                <g transform="translate(230,104)">
+                  <line x1="0" y1="14" x2="38" y2="14" stroke="#5b9bd5" stroke-width="2" stroke-dasharray="3 3" opacity="0.7">
                     <animate attributeName="stroke-dashoffset" values="0;-12" dur="1.2s" repeatCount="indefinite"/>
                   </line>
-                  <polygon points="32,8 42,14 32,20" fill="#5b9bd5"/>
-                  <text x="21" y="0" font-family="Geist Mono, monospace" font-size="8" font-weight="700" fill="#5b9bd5" text-anchor="middle" letter-spacing="0.6">SENDS</text>
+                  <polygon points="34,7 44,14 34,21" fill="#5b9bd5"/>
+                  <text x="22" y="0" font-family="Geist Mono, monospace" font-size="10" font-weight="700" fill="#5b9bd5" text-anchor="middle" letter-spacing="0.6">SENDS</text>
                 </g>
 
-                <!-- ==== RIGHT: CUSTOMER PHONE ==== -->
-                <g transform="translate(274, 6)">
+                <!-- ==== RIGHT: CUSTOMER PHONE (bigger) ==== -->
+                <g transform="translate(275, 6)">
                   <!-- Phone outline -->
-                  <rect x="0" y="0" width="78" height="156" rx="11" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1.2"/>
-                  <rect x="3" y="3" width="72" height="150" rx="8" fill="#fff"/>
+                  <rect x="0" y="0" width="80" height="200" rx="13" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1.4"/>
+                  <rect x="3" y="3" width="74" height="194" rx="10" fill="#fff"/>
                   <!-- Notch -->
-                  <rect x="30" y="6" width="18" height="3" rx="1.5" fill="#0a0a0a"/>
+                  <rect x="30" y="7" width="20" height="4" rx="2" fill="#0a0a0a"/>
                   <!-- AI banner -->
-                  <rect x="7" y="14" width="64" height="14" rx="2.5" fill="#0a0a0a"/>
-                  <rect x="9" y="16" width="10" height="10" rx="1.5" fill="#ea4023"/>
-                  <text x="14" y="24" font-family="Geist Mono, monospace" font-size="7" font-weight="700" fill="#fff" text-anchor="middle">ai</text>
-                  <text x="47" y="24" font-family="Geist Mono, monospace" font-size="6.5" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">REQUEST</text>
+                  <rect x="8" y="17" width="64" height="16" rx="3" fill="#0a0a0a"/>
+                  <rect x="10" y="19" width="11" height="12" rx="1.5" fill="#ea4023"/>
+                  <text x="15.5" y="28" font-family="Geist Mono, monospace" font-size="8" font-weight="700" fill="#fff" text-anchor="middle">ai</text>
+                  <text x="48" y="28" font-family="Geist Mono, monospace" font-size="7.5" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="0.5">REQUEST</text>
                   <!-- Title -->
-                  <text x="39" y="44" font-family="Geist, sans-serif" font-size="9" font-weight="700" fill="#0a0a0a" text-anchor="middle">Take a photo</text>
-                  <text x="39" y="54" font-family="Geist, sans-serif" font-size="6.5" fill="#888" text-anchor="middle">of your card</text>
+                  <text x="40" y="52" font-family="Geist, sans-serif" font-size="11" font-weight="700" fill="#0a0a0a" text-anchor="middle">Take a photo</text>
+                  <text x="40" y="65" font-family="Geist, sans-serif" font-size="8" fill="#888" text-anchor="middle">of your card</text>
                   <!-- Camera viewfinder -->
-                  <rect x="9" y="60" width="60" height="62" rx="4" fill="#f0f0f0"/>
+                  <rect x="10" y="74" width="60" height="80" rx="5" fill="#f0f0f0"/>
                   <!-- Corner brackets -->
-                  <path d="M14 64 L14 70 M14 64 L20 64" stroke="#5b9bd5" stroke-width="1.8" fill="none"/>
-                  <path d="M64 64 L64 70 M64 64 L58 64" stroke="#5b9bd5" stroke-width="1.8" fill="none"/>
-                  <path d="M14 118 L14 112 M14 118 L20 118" stroke="#5b9bd5" stroke-width="1.8" fill="none"/>
-                  <path d="M64 118 L64 112 M64 118 L58 118" stroke="#5b9bd5" stroke-width="1.8" fill="none"/>
+                  <path d="M15 79 L15 86 M15 79 L22 79" stroke="#5b9bd5" stroke-width="2.2" fill="none"/>
+                  <path d="M65 79 L65 86 M65 79 L58 79" stroke="#5b9bd5" stroke-width="2.2" fill="none"/>
+                  <path d="M15 149 L15 142 M15 149 L22 149" stroke="#5b9bd5" stroke-width="2.2" fill="none"/>
+                  <path d="M65 149 L65 142 M65 149 L58 149" stroke="#5b9bd5" stroke-width="2.2" fill="none"/>
                   <!-- Card silhouette -->
-                  <rect x="20" y="78" width="38" height="24" rx="2" fill="#5b9bd5" opacity="0.18"/>
-                  <rect x="24" y="84" width="14" height="2" rx="1" fill="#5b9bd5" opacity="0.5"/>
-                  <rect x="24" y="94" width="22" height="2" rx="1" fill="#5b9bd5" opacity="0.5"/>
+                  <rect x="20" y="96" width="40" height="26" rx="2.5" fill="#5b9bd5" opacity="0.2"/>
+                  <rect x="24" y="103" width="15" height="2.5" rx="1.25" fill="#5b9bd5" opacity="0.55"/>
+                  <rect x="24" y="115" width="24" height="2.5" rx="1.25" fill="#5b9bd5" opacity="0.55"/>
                   <!-- Capture button -->
-                  <circle cx="39" cy="138" r="10" fill="#fff" stroke="#5b9bd5" stroke-width="2"/>
-                  <circle cx="39" cy="138" r="6.5" fill="#5b9bd5"/>
+                  <circle cx="40" cy="178" r="12" fill="#fff" stroke="#5b9bd5" stroke-width="2.5"/>
+                  <circle cx="40" cy="178" r="8" fill="#5b9bd5"/>
                 </g>
 
                 <!-- Label below phone -->
-                <text x="313" y="180" font-family="Geist Mono, monospace" font-size="10" font-weight="700" fill="#5b9bd5" text-anchor="middle" letter-spacing="0.8">CUSTOMER</text>
+                <text x="315" y="234" font-family="Geist Mono, monospace" font-size="13" font-weight="700" fill="#5b9bd5" text-anchor="middle" letter-spacing="0.8">CUSTOMER</text>
               </svg>
             </div>
           </div>
