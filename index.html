@@ -3,30 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a0a0a">
+  <meta name="theme-color" content="#05091b">
   <title>Zappix — AI Customer Engagement · Outcomes-as-a-Service</title>
   <meta name="description" content="Stop buying AI software. Start buying AI outcomes. AI that engages, shows, and resolves — across inbound and outbound interactions. Fully managed. Enterprise compliant. Outcomes guaranteed.">
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Zappix — AI Customer Engagement · Outcomes-as-a-Service">
   <meta property="og:description" content="Stop buying AI software. Start buying AI outcomes.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://zappix.com/">
 
-  <!-- Fonts: Geist + Geist Mono + Instrument Serif -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="theme-dark">
 
 <!-- ============ HEADER ============ -->
 <header class="site-header" id="site-header">
   <div class="container header-inner">
     <a href="#" class="brand" aria-label="Zappix home">
-      <span class="brand-mark">zappix</span>
+      <span class="brand-mark" aria-hidden="true"><span class="brand-mark-letter">Z</span></span>
+      <span class="brand-word">zappix</span>
     </a>
 
     <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -43,7 +42,7 @@
       </ul>
       <div class="nav-actions">
         <a href="#" class="link-quiet">Sign in</a>
-        <a href="mailto:hello@zappix.com" class="btn btn-primary">Book a discovery call <span class="arrow">→</span></a>
+        <a href="mailto:hello@zappix.com" class="btn btn-outline">Book a discovery call <span class="arrow">→</span></a>
       </div>
     </nav>
   </div>
@@ -51,51 +50,64 @@
 
 <main>
 
-  <!-- ============ HERO ============ -->
+  <!-- ============ HERO (dark) ============ -->
   <section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+
     <div class="container">
       <div class="eyebrow-row">
         <span class="eyebrow">AI customer engagement</span>
         <span class="eyebrow-dot">·</span>
-        <span class="eyebrow">Outcomes-as-a-Service · 2026</span>
+        <span class="eyebrow"><span class="dot dot-red"></span> Outcomes-as-a-Service · 2026</span>
         <span class="eyebrow-dot">·</span>
         <span class="eyebrow">zappix.com</span>
       </div>
 
-      <div class="section-marker">§ The thesis</div>
+      <div class="section-marker section-marker-red"><span class="marker-line"></span>§ The thesis</div>
 
       <h1 class="hero-title">
-        Stop buying AI<br>
-        software. Start<br>
-        buying AI<br>
-        <span class="hero-accent">outcomes</span>
+        Stop buying AI software. Start buying AI <em class="em-brand">outcomes</em><span class="period">.</span>
       </h1>
 
-      <p class="hero-sub">
-        AI that <em>engages</em>, <em>shows</em>, and <em>resolves</em> — across inbound and outbound interactions. Fully managed. Enterprise compliant. Outcomes guaranteed.
-      </p>
+      <div class="hero-foot">
+        <p class="hero-sub">
+          AI that <strong>engages</strong>, <strong>shows</strong>, and <strong>resolves</strong> — across inbound and outbound interactions. Fully managed. Enterprise compliant. Outcomes guaranteed.
+        </p>
 
-      <div class="hero-ctas">
-        <a href="mailto:hello@zappix.com" class="btn btn-primary btn-lg">Book a discovery call <span class="arrow">→</span></a>
-        <a href="#platform" class="btn btn-ghost btn-lg">See the platform</a>
+        <div class="hero-side">
+          <div class="hero-wave" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+
+          <div class="hero-ctas">
+            <a href="mailto:hello@zappix.com" class="btn btn-brand btn-lg">Book a discovery call <span class="arrow">→</span></a>
+            <a href="#platform" class="btn btn-outline btn-lg">See the platform</a>
+          </div>
+        </div>
       </div>
+    </div>
 
-      <!-- Three pillar cards -->
-      <div class="pillars">
+    <!-- Pillars inside dark hero -->
+    <div class="pillars-wrap">
+      <div class="container pillars">
         <article class="pillar">
-          <div class="pillar-label"><span class="pillar-arrow">↘</span> Inbound call or web</div>
+          <div class="pillar-label"><span class="pillar-arrow pillar-arrow-red">↘</span> Inbound call or web</div>
           <h3 class="pillar-title">Deflect &amp; resolve.</h3>
           <p class="pillar-stat">&gt;75% engagements contained</p>
         </article>
 
         <article class="pillar">
-          <div class="pillar-label"><span class="pillar-arrow">↗</span> Outbound contact</div>
+          <div class="pillar-label"><span class="pillar-arrow pillar-arrow-orange">↗</span> Outbound contact</div>
           <h3 class="pillar-title">Engage &amp; convert.</h3>
           <p class="pillar-stat">Voice · Text · Email</p>
         </article>
 
         <article class="pillar">
-          <div class="pillar-label"><span class="pillar-arrow">↔</span> Live assist</div>
+          <div class="pillar-label"><span class="pillar-arrow pillar-arrow-blue">↔</span> Live assist</div>
           <h3 class="pillar-title">Equip every agent.</h3>
           <p class="pillar-stat">Real-time digital tools</p>
         </article>
@@ -104,32 +116,48 @@
   </section>
 
 
-  <!-- ============ §02 TWO GAPS ============ -->
-  <section class="two-gaps section-pad">
-    <div class="container">
-      <div class="section-marker">§ 02 · The thesis</div>
-      <h2 class="section-title">
-        Two gaps.<br>
-        <em>One platform</em> to close them.
+  <!-- ============ §02 TWO GAPS (cream) ============ -->
+  <section class="two-gaps section-pad section-cream">
+    <div class="container container-center">
+      <div class="section-marker section-marker-pill"><span class="dot dot-red"></span> § 02 · The thesis</div>
+      <h2 class="section-title section-title-center">
+        <span class="clause-1">Two gaps.</span>
+        <span class="clause-2">One platform to close them.</span>
       </h2>
 
       <div class="gaps-grid">
-        <article class="gap-card">
-          <div class="gap-num">01 · Inbound</div>
-          <h3 class="gap-title">Deflect<br><em>&amp; resolve.</em></h3>
+        <article class="gap-card gap-card-red">
+          <div class="gap-head">
+            <span class="gap-icon gap-icon-red">↘</span>
+            <span class="gap-num">01 · Inbound</span>
+          </div>
+          <h3 class="gap-title">Deflect <em class="em-red">&amp; resolve.</em></h3>
           <p class="gap-body">Incoming calls are deflected from live agents to AI self-service. Customers resolve faster — without ever reaching a queue.</p>
           <div class="gap-stat">
-            <div class="gap-stat-num">75%+</div>
+            <div class="gap-stat-row">
+              <div class="gap-stat-num">75%+</div>
+              <span class="gap-stat-wave gap-stat-wave-red" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </span>
+            </div>
             <div class="gap-stat-label">Containment rate</div>
           </div>
         </article>
 
-        <article class="gap-card">
-          <div class="gap-num">02 · Outbound</div>
-          <h3 class="gap-title">Engage<br><em>&amp; convert.</em></h3>
+        <article class="gap-card gap-card-blue">
+          <div class="gap-head">
+            <span class="gap-icon gap-icon-blue">↗</span>
+            <span class="gap-num">02 · Outbound</span>
+          </div>
+          <h3 class="gap-title">Engage <em class="em-blue">&amp; convert.</em></h3>
           <p class="gap-body">Customers are proactively engaged through fully automated, multi-touch campaigns across voice, text, and email.</p>
           <div class="gap-stat">
-            <div class="gap-stat-num">Millions</div>
+            <div class="gap-stat-row">
+              <div class="gap-stat-num">Millions</div>
+              <span class="gap-stat-wave gap-stat-wave-blue" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              </span>
+            </div>
             <div class="gap-stat-label">Touches per month</div>
           </div>
         </article>
@@ -138,91 +166,111 @@
   </section>
 
 
-  <!-- ============ §03 DIFFERENTIATOR ============ -->
-  <section class="multimodal section-pad">
-    <div class="container">
-      <div class="section-marker">§ 03 · What makes us different</div>
-      <h2 class="section-title">
-        One agent.<br>
-        <em>Two channels</em> at once.
+  <!-- ============ §03 DIFFERENTIATOR (dark) ============ -->
+  <section class="multimodal section-pad section-dark">
+    <div class="multimodal-glow" aria-hidden="true"></div>
+    <div class="container container-center">
+      <div class="section-marker section-marker-pill section-marker-on-dark"><span class="dot dot-red"></span> § 03 · What makes us different</div>
+      <h2 class="section-title section-title-center section-title-on-dark">
+        <span class="clause-1">One agent.</span>
+        <span class="clause-2 clause-2-on-dark">Two channels at once.</span>
       </h2>
-      <p class="section-lede">
-        The only platform that engages customers across voice and visual interfaces <em>simultaneously</em>, in real time. Branded multimodal AI — voice + visual, in lock-step.
+      <p class="section-lede section-lede-center section-lede-on-dark">
+        The only platform that engages customers across voice and visual interfaces <strong>simultaneously</strong>, in real time. Branded multimodal AI — voice + visual, in lock-step.
       </p>
 
-      <!-- Multimodal mockup -->
-      <div class="mm-mockup">
-
-        <!-- Voice side -->
-        <div class="mm-side mm-voice">
-          <div class="mm-side-label"><span class="mm-dot mm-dot-live"></span> Live voice</div>
-          <h4 class="mm-side-title">Natural conversation</h4>
-          <p class="mm-side-body">LLM-powered AI engages the customer by voice or chat, understanding intent, handling complexity.</p>
-
-          <div class="mm-voice-card" aria-hidden="true">
-            <div class="mm-voice-top">
-              <span class="mm-voice-time">3:45</span>
-              <span class="mm-voice-name">AI Financial Assistant</span>
-              <span class="mm-voice-bars">
-                <span></span><span></span><span></span><span></span><span></span>
-              </span>
-            </div>
-            <div class="mm-voice-mid">
-              <div class="mm-waveform">
-                <span></span><span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span><span></span>
-              </div>
-            </div>
-            <div class="mm-voice-status">AI speaking…</div>
+      <!-- Phone mockup centered between two side waveforms -->
+      <div class="mm-stage">
+        <!-- Left: red voice -->
+        <div class="mm-side mm-side-left">
+          <div class="mm-side-tag mm-side-tag-red"><span class="dot dot-red"></span> Live voice</div>
+          <div class="mm-wave mm-wave-red" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span>
           </div>
         </div>
 
-        <!-- Visual side -->
-        <div class="mm-side mm-visual">
-          <div class="mm-side-label">Branded interface <span class="mm-dot mm-dot-sync"></span></div>
-          <h4 class="mm-side-title">Live visual</h4>
-          <p class="mm-side-body">Guided steps, confirmations, forms and digital actions synchronized with the call.</p>
-
-          <div class="mm-visual-card" aria-hidden="true">
-            <div class="mm-visual-head">
-              <div class="mm-visual-brand">
-                <span class="mm-visual-logo">ai</span>
-                <span class="mm-visual-name">FINANCIAL<br>SERVICES</span>
+        <!-- Phone mockup -->
+        <div class="phone" aria-hidden="true">
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-statusbar">
+                <span class="phone-time">3:45</span>
+                <span class="phone-signal">
+                  <i></i><i></i><i></i><i></i>
+                </span>
               </div>
-              <div class="mm-visual-step">02 / 39</div>
-            </div>
-            <div class="mm-visual-body">
-              <div class="mm-visual-avatar">AI</div>
-              <div class="mm-visual-msg">Hi Jane, can I help you today?</div>
-            </div>
-            <div class="mm-visual-actions">
-              <span class="mm-chip">Yes</span>
-              <span class="mm-chip">No</span>
-              <span class="mm-chip mm-chip-dark">Continue →</span>
-            </div>
-            <div class="mm-visual-foot">
-              <span>Guided in real time</span>
+              <div class="phone-app-header">
+                <div class="phone-app-info">
+                  <span class="phone-app-icon">
+                    <span class="phone-app-icon-bars"><i></i><i></i><i></i></span>
+                  </span>
+                  <div class="phone-app-meta">
+                    <div class="phone-app-name">AI Financial Assistant</div>
+                    <div class="phone-app-sub">02 / 39</div>
+                  </div>
+                </div>
+                <span class="phone-app-end" aria-label="End call">✕</span>
+              </div>
+              <div class="phone-banner">
+                <span class="phone-banner-mark">ai</span>
+                <span class="phone-banner-text">FINANCIAL <em>SERVICES</em></span>
+              </div>
+              <div class="phone-msg">
+                <span class="phone-avatar">ai</span>
+                <div class="phone-bubble">Hi Jane, can I help you today?</div>
+              </div>
+              <div class="phone-actions">
+                <span class="phone-btn">Yes</span>
+                <span class="phone-btn phone-btn-ghost">No</span>
+              </div>
             </div>
           </div>
+        </div>
+
+        <!-- Right: blue visual -->
+        <div class="mm-side mm-side-right">
+          <div class="mm-side-tag mm-side-tag-blue">Live visual <span class="dot dot-blue"></span></div>
+          <div class="mm-wave mm-wave-blue" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Captions beneath stage -->
+      <div class="mm-captions">
+        <div class="mm-caption mm-caption-red">
+          <h4 class="mm-caption-title">Natural conversation</h4>
+          <p class="mm-caption-body">LLM-powered AI engages the customer by voice or chat, understanding intent, handling complexity.</p>
+        </div>
+        <div class="mm-caption mm-caption-blue">
+          <h4 class="mm-caption-title">Branded interface</h4>
+          <p class="mm-caption-body">Guided steps, confirmations, forms and digital actions synchronized with the call.</p>
         </div>
       </div>
 
       <!-- Engage / Show / Resolve -->
       <ol class="esr">
-        <li>
-          <span class="esr-num">01</span>
+        <li class="esr-item">
+          <div class="esr-num"><span class="dot dot-red"></span> 01</div>
           <h4 class="esr-title">Engage.</h4>
           <p class="esr-body">LLM-trained conversational support by voice or chat.</p>
         </li>
-        <li>
-          <span class="esr-num">02</span>
+        <li class="esr-item">
+          <div class="esr-num"><span class="dot dot-orange"></span> 02</div>
           <h4 class="esr-title">Show.</h4>
           <p class="esr-body">Branded multimodal visual interface delivers visualized information and digital actions.</p>
         </li>
-        <li>
-          <span class="esr-num">03</span>
+        <li class="esr-item">
+          <div class="esr-num"><span class="dot dot-blue"></span> 03</div>
           <h4 class="esr-title">Resolve.</h4>
           <p class="esr-body">End-to-end. Full containment. Or seamless agent handoff when needed.</p>
         </li>
@@ -231,165 +279,146 @@
   </section>
 
 
-  <!-- ============ §04 THREE PRODUCTS ============ -->
-  <section class="products section-pad" id="platform">
-    <div class="container">
-      <div class="section-marker">§ 04 · The platform</div>
-      <h2 class="section-title">
-        One platform.<br>
-        <em>Three products.</em>
+  <!-- ============ §04 THREE PRODUCTS (cream) ============ -->
+  <section class="products section-pad section-cream" id="platform">
+    <div class="container container-center">
+      <div class="section-marker section-marker-pill"><span class="dot dot-red"></span> § 04 · The platform</div>
+      <h2 class="section-title section-title-center">
+        <span class="clause-1">One platform.</span>
+        <span class="clause-2">Three products.</span>
       </h2>
 
-      <!-- Product 1 — Intelligent Outreach -->
-      <article class="product">
-        <div class="product-visual">
-          <div class="product-visual-label">Multi-touch sequence</div>
-          <div class="sequence" aria-hidden="true">
-            <div class="seq-day">
-              <div class="seq-day-tag">Day<br><strong>01</strong></div>
-              <div class="seq-pills"><span class="seq-pill">SMS</span></div>
-            </div>
-            <div class="seq-line"></div>
-            <div class="seq-day">
-              <div class="seq-day-tag">Day<br><strong>03</strong></div>
-              <div class="seq-pills"><span class="seq-pill">Email</span><span class="seq-pill">Voice</span></div>
-            </div>
-            <div class="seq-line"></div>
-            <div class="seq-day">
-              <div class="seq-day-tag">Day<br><strong>07</strong></div>
-              <div class="seq-pills"><span class="seq-pill">SMS</span><span class="seq-pill">Email</span></div>
-            </div>
-            <div class="seq-line"></div>
-            <div class="seq-day">
-              <div class="seq-day-tag">Day<br><strong>10</strong></div>
-              <div class="seq-pills"><span class="seq-pill">Voice</span><span class="seq-pill">Email</span><span class="seq-pill">SMS</span></div>
+      <div class="products-grid">
+        <!-- Product 1 — Intelligent Outreach -->
+        <article class="product-card">
+          <div class="product-visual product-visual-dark">
+            <div class="product-glow product-glow-red" aria-hidden="true"></div>
+            <div class="product-visual-label">Multi-touch sequence</div>
+            <div class="sequence" aria-hidden="true">
+              <div class="seq-row">
+                <span class="seq-day">Day 01</span>
+                <span class="seq-pill seq-pill-dim">SMS</span>
+              </div>
+              <div class="seq-row">
+                <span class="seq-day">Day 03</span>
+                <span class="seq-pill seq-pill-dim">Email</span>
+                <span class="seq-pill seq-pill-dim">Voice</span>
+              </div>
+              <div class="seq-row">
+                <span class="seq-day">Day 07</span>
+                <span class="seq-pill seq-pill-dim">SMS</span>
+                <span class="seq-pill seq-pill-dim">Email</span>
+              </div>
+              <div class="seq-row seq-row-highlight">
+                <span class="seq-day">Day 10</span>
+                <span class="seq-pill seq-pill-brand">Voice</span>
+                <span class="seq-pill seq-pill-brand">Email</span>
+                <span class="seq-pill seq-pill-brand">SMS</span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="product-copy">
-          <div class="product-num">01 · Outbound</div>
-          <h3 class="product-title">Intelligent <em>Outreach</em></h3>
-          <p class="product-body">Orchestrated, multi-touch campaigns across voice, text, and email — improving response rates and eliminating manual outreach effort.</p>
-          <ul class="product-feats">
-            <li>Voice campaigns</li>
-            <li>SMS sequences</li>
-            <li>Email orchestration</li>
-          </ul>
-        </div>
-      </article>
+          <div class="product-body">
+            <div class="product-num"><span class="dot dot-red"></span> 01 · Outbound</div>
+            <h3 class="product-title">Intelligent Outreach</h3>
+            <p class="product-copy">Orchestrated, multi-touch campaigns across voice, text, and email — improving response rates and eliminating manual outreach effort.</p>
+            <ul class="product-feats product-feats-red">
+              <li>Voice campaigns</li>
+              <li>SMS sequences</li>
+              <li>Email orchestration</li>
+            </ul>
+          </div>
+        </article>
 
-      <!-- Product 2 — AI Self-Service -->
-      <article class="product product-reverse">
-        <div class="product-visual">
-          <div class="product-visual-label">Voice + Visual · Synchronized</div>
-          <div class="ss-mock" aria-hidden="true">
-            <div class="ss-mock-pane ss-mock-voice">
-              <div class="ss-mock-tag">Voice</div>
-              <div class="ss-mock-wave">
+        <!-- Product 2 — AI Self-Service -->
+        <article class="product-card">
+          <div class="product-visual product-visual-dark">
+            <div class="product-glow product-glow-mixed" aria-hidden="true"></div>
+            <div class="product-visual-label">Voice + Visual · Synchronized</div>
+            <div class="ss-stage" aria-hidden="true">
+              <div class="ss-wave ss-wave-red">
                 <span></span><span></span><span></span><span></span><span></span>
                 <span></span><span></span><span></span><span></span><span></span>
                 <span></span><span></span>
               </div>
-              <div class="ss-mock-caption">AI speaking…</div>
-            </div>
-            <div class="ss-mock-link" aria-hidden="true">⇄</div>
-            <div class="ss-mock-pane ss-mock-visual">
-              <div class="ss-mock-tag">Visual</div>
-              <div class="ss-mock-bubble">Confirm your appointment for Thursday, 2:30 PM</div>
-              <div class="ss-mock-actions">
-                <span class="ss-mock-btn">Confirm</span>
-                <span class="ss-mock-btn ss-mock-btn-ghost">Reschedule</span>
+              <div class="ss-orb"></div>
+              <div class="ss-wave ss-wave-blue">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="product-copy">
-          <div class="product-num">02 · Inbound</div>
-          <h3 class="product-title">AI <em>Self-Service</em></h3>
-          <p class="product-body">Multimodal LLM-powered conversational AI combined with Visual IVR for a simultaneous, real-time voice and visual journey.</p>
-          <ul class="product-feats">
-            <li>LLM conversational AI</li>
-            <li>Visual IVR overlay</li>
-            <li>End-to-end resolution</li>
-          </ul>
-        </div>
-      </article>
+          <div class="product-body">
+            <div class="product-num"><span class="dot dot-orange"></span> 02 · Inbound</div>
+            <h3 class="product-title">AI Self-Service</h3>
+            <p class="product-copy">Multimodal LLM-powered conversational AI combined with Visual IVR for a simultaneous, real-time voice and visual journey.</p>
+            <ul class="product-feats product-feats-orange">
+              <li>LLM conversational AI</li>
+              <li>Visual IVR overlay</li>
+              <li>End-to-end resolution</li>
+            </ul>
+          </div>
+        </article>
 
-      <!-- Product 3 — Agent Assistant -->
-      <article class="product">
-        <div class="product-visual">
-          <div class="product-visual-label">Agent console</div>
-          <div class="console" aria-hidden="true">
-            <div class="console-tile">
-              <div class="console-tile-ico">📝</div>
-              <div class="console-tile-label">Forms</div>
-            </div>
-            <div class="console-tile">
-              <div class="console-tile-ico">📷</div>
-              <div class="console-tile-label">Photos</div>
-            </div>
-            <div class="console-tile">
-              <div class="console-tile-ico">💬</div>
-              <div class="console-tile-label">Live chat</div>
-            </div>
-            <div class="console-tile">
-              <div class="console-tile-ico">💳</div>
-              <div class="console-tile-label">Pay</div>
-            </div>
-            <div class="console-tile">
-              <div class="console-tile-ico">📊</div>
-              <div class="console-tile-label">Survey</div>
-            </div>
-            <div class="console-tile">
-              <div class="console-tile-ico">📄</div>
-              <div class="console-tile-label">Docs</div>
+        <!-- Product 3 — Agent Assistant -->
+        <article class="product-card">
+          <div class="product-visual product-visual-dark">
+            <div class="product-glow product-glow-blue" aria-hidden="true"></div>
+            <div class="product-visual-label">Agent console</div>
+            <div class="console" aria-hidden="true">
+              <div class="console-tile">Forms</div>
+              <div class="console-tile">Photos</div>
+              <div class="console-tile console-tile-active">Live chat</div>
+              <div class="console-tile">Pay</div>
+              <div class="console-tile">Survey</div>
+              <div class="console-tile">Docs</div>
             </div>
           </div>
-        </div>
 
-        <div class="product-copy">
-          <div class="product-num">03 · Live Assist</div>
-          <h3 class="product-title">Agent <em>Assistant</em></h3>
-          <p class="product-body">Equip live agents with real-time digital tools — sharing forms, image uploads, screen sharing, secure payments, and chatting live.</p>
-          <ul class="product-feats">
-            <li>Form sharing</li>
-            <li>Image uploads</li>
-            <li>Live chat</li>
-          </ul>
-        </div>
-      </article>
+          <div class="product-body">
+            <div class="product-num"><span class="dot dot-blue"></span> 03 · Live Assist</div>
+            <h3 class="product-title">Agent Assistant</h3>
+            <p class="product-copy">Equip live agents with real-time digital tools — sharing forms, image uploads, screen sharing, secure payments, and chatting live.</p>
+            <ul class="product-feats product-feats-blue">
+              <li>Form sharing</li>
+              <li>Image uploads</li>
+              <li>Live chat</li>
+            </ul>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
 
-  <!-- ============ §05 RESULTS ============ -->
+  <!-- ============ §05 RESULTS (white, colored cards) ============ -->
   <section class="results section-pad">
-    <div class="container">
-      <div class="section-marker">§ 05 · Results</div>
-      <h2 class="section-title">
-        Measurable outcomes.<br>
-        <em>Every deployment.</em>
+    <div class="container container-center">
+      <div class="section-marker section-marker-pill"><span class="dot dot-red"></span> § 05 · Results</div>
+      <h2 class="section-title section-title-center">
+        <span class="clause-1">Measurable outcomes.</span>
+        <span class="clause-2">Every deployment.</span>
       </h2>
 
       <div class="stats-grid">
-        <div class="stat">
+        <div class="stat stat-red">
           <div class="stat-num">75%+</div>
           <div class="stat-label">Inbound containment</div>
           <div class="stat-detail">Calls resolved without a live agent</div>
         </div>
-        <div class="stat">
+        <div class="stat stat-orange">
           <div class="stat-num">↓40%</div>
           <div class="stat-label">Cost-to-serve</div>
           <div class="stat-detail">Across self-service deployments</div>
         </div>
-        <div class="stat">
+        <div class="stat stat-blue">
           <div class="stat-num">↑3×</div>
           <div class="stat-label">Outbound response</div>
           <div class="stat-detail">vs. manual outreach campaigns</div>
         </div>
-        <div class="stat">
+        <div class="stat stat-green">
           <div class="stat-num">↓60%</div>
           <div class="stat-label">Manual effort</div>
           <div class="stat-detail">Eliminated through automation</div>
@@ -399,50 +428,54 @@
   </section>
 
 
-  <!-- ============ §06 OAAS ============ -->
-  <section class="oaas section-pad section-dark">
-    <div class="container">
-      <div class="section-marker section-marker-light">§ 06 · How we deliver</div>
-      <h2 class="section-title section-title-light">
-        Outcomes-<br><em>as-a-Service</em>
+  <!-- ============ §06 OAAS (cream) ============ -->
+  <section class="oaas section-pad section-cream">
+    <div class="container container-center">
+      <div class="section-marker section-marker-pill"><span class="dot dot-red"></span> § 06 · How we deliver</div>
+      <h2 class="section-title section-title-center oaas-title">
+        Outcomes-<em class="em-brand">as-a-Service</em><span class="period">.</span>
       </h2>
-      <p class="section-lede section-lede-light">
+      <p class="section-lede section-lede-center">
         Most AI vendors sell you a toolkit and walk away. We deliver AI outcomes — fully managed, compliance-first, and continuously improved.
       </p>
 
-      <ol class="phases">
-        <li class="phase">
-          <span class="phase-num">01</span>
-          <h4 class="phase-title">Design</h4>
-          <p class="phase-body">We map your customer journeys, define containment targets, and architect the solution around your systems.</p>
-        </li>
-        <li class="phase">
-          <span class="phase-num">02</span>
-          <h4 class="phase-title">Build</h4>
-          <p class="phase-body">Our team builds and configures the full deployment — LLM training, voice &amp; visual interfaces, integrations.</p>
-        </li>
-        <li class="phase">
-          <span class="phase-num">03</span>
-          <h4 class="phase-title">Launch</h4>
-          <p class="phase-body">Go live. Fully tested, fully compliant, fully operational — without burdening your internal team.</p>
-        </li>
-        <li class="phase">
-          <span class="phase-num">04</span>
-          <h4 class="phase-title">Optimize</h4>
-          <p class="phase-body">Built-in analytics surface resolution rates and engagement patterns. We continuously improve every deployment.</p>
-        </li>
-      </ol>
+      <!-- Connected dot timeline -->
+      <div class="timeline">
+        <div class="timeline-track" aria-hidden="true"></div>
+        <ol class="phases">
+          <li class="phase">
+            <span class="phase-circle phase-circle-red">01</span>
+            <h4 class="phase-title">Design</h4>
+            <p class="phase-body">We map your customer journeys, define containment targets, and architect the solution around your systems.</p>
+          </li>
+          <li class="phase">
+            <span class="phase-circle phase-circle-orange">02</span>
+            <h4 class="phase-title">Build</h4>
+            <p class="phase-body">Our team builds and configures the full deployment — LLM training, voice &amp; visual interfaces, integrations.</p>
+          </li>
+          <li class="phase">
+            <span class="phase-circle phase-circle-green">03</span>
+            <h4 class="phase-title">Launch</h4>
+            <p class="phase-body">Go live. Fully tested, fully compliant, fully operational — without burdening your internal team.</p>
+          </li>
+          <li class="phase">
+            <span class="phase-circle phase-circle-blue">04</span>
+            <h4 class="phase-title">Optimize</h4>
+            <p class="phase-body">Built-in analytics surface resolution rates and engagement patterns. We continuously improve every deployment.</p>
+          </li>
+        </ol>
+      </div>
 
       <div class="oaas-pills">
-        <span class="oaas-pill">Fully Managed</span>
-        <span class="oaas-pill">Compliance-First</span>
-        <span class="oaas-pill">Continuously Optimized</span>
+        <span class="oaas-pill"><span class="dot dot-red"></span> Fully Managed</span>
+        <span class="oaas-pill"><span class="dot dot-orange"></span> Compliance-First</span>
+        <span class="oaas-pill"><span class="dot dot-green"></span> Continuously Optimized</span>
       </div>
     </div>
   </section>
 
 
-  <!-- ============ TRUST + STACK ============ -->
+  <!-- ============ TRUST + STACK (white) ============ -->
   <section class="trust section-pad">
     <div class="container">
       <div class="trust-grid">
@@ -472,16 +505,16 @@
         <div class="trust-block">
           <div class="trust-eyebrow">Plays nicely with your stack</div>
           <div class="logos">
-            <span class="logo-chip">OpenAI</span>
-            <span class="logo-chip">Anthropic</span>
-            <span class="logo-chip">Gemini</span>
-            <span class="logo-chip">Salesforce</span>
-            <span class="logo-chip">Genesys</span>
-            <span class="logo-chip">Five9</span>
-            <span class="logo-chip">Twilio</span>
-            <span class="logo-chip">Zendesk</span>
-            <span class="logo-chip">ServiceNow</span>
-            <span class="logo-chip">HubSpot</span>
+            <span class="logo-word">OpenAI</span>
+            <span class="logo-word">Anthropic</span>
+            <span class="logo-word">Gemini</span>
+            <span class="logo-word">Salesforce</span>
+            <span class="logo-word">Genesys</span>
+            <span class="logo-word">Five9</span>
+            <span class="logo-word">Twilio</span>
+            <span class="logo-word">Zendesk</span>
+            <span class="logo-word">ServiceNow</span>
+            <span class="logo-word">HubSpot</span>
           </div>
         </div>
 
@@ -490,18 +523,18 @@
   </section>
 
 
-  <!-- ============ FINAL CTA ============ -->
-  <section class="final-cta section-pad">
-    <div class="container">
-      <div class="section-marker">Begin the conversation</div>
+  <!-- ============ FINAL CTA (dark, glowing) ============ -->
+  <section class="final-cta section-dark">
+    <div class="final-cta-glow" aria-hidden="true"></div>
+    <div class="container container-center">
+      <div class="section-marker section-marker-pill section-marker-on-dark"><span class="dot dot-red"></span> Begin the conversation</div>
       <h2 class="final-title">
-        You don't buy software.<br>
-        You buy <em>outcomes</em>
+        You don't buy software. You buy <em class="em-brand em-brand-glow">outcomes</em><span class="period">.</span>
       </h2>
       <p class="final-sub">Let's map your first deployment together. Discovery call · Outcomes design · Branded demo · Go live.</p>
       <div class="final-ctas">
-        <a href="mailto:hello@zappix.com" class="btn btn-primary btn-lg">Book a discovery call <span class="arrow">→</span></a>
-        <a href="mailto:hello@zappix.com" class="btn-link">hello@zappix.com</a>
+        <a href="mailto:hello@zappix.com" class="btn btn-brand btn-lg btn-glow">Book a discovery call <span class="arrow">→</span></a>
+        <a href="mailto:hello@zappix.com" class="btn btn-outline btn-lg">hello@zappix.com</a>
       </div>
     </div>
   </section>
@@ -515,7 +548,10 @@
 
     <div class="footer-top">
       <div class="footer-brand">
-        <div class="footer-mark">zappix</div>
+        <a href="#" class="brand">
+          <span class="brand-mark" aria-hidden="true"><span class="brand-mark-letter">Z</span></span>
+          <span class="brand-word">zappix</span>
+        </a>
         <p class="footer-tag">AI Customer Engagement · Outcomes-as-a-Service. Designed, built, launched and continuously optimized.</p>
         <div class="footer-compliance">
           <span>SOC 2</span>
