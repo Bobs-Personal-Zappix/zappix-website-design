@@ -244,15 +244,15 @@ strong.hl-orange { color: var(--orange); font-weight: 700; }
 .brand {
   display: inline-flex;
   align-items: center;
-  height: 34px;
+  height: 38px;
 }
 .brand-logo {
-  height: 34px;
+  height: 38px;
   width: auto;
   display: block;
 }
 .brand-logo-footer {
-  height: 38px;
+  height: 42px;
 }
 
 
